@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+Sitemap: https://chedigdoura.github.io/forma-virtual-try-on/sitemap.xml
