@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="236" height="52" viewBox="0 0 236 52" role="img" aria-labelledby="title desc">
+<title id="title">Jihen Abbes Optique</title>
+<desc id="desc">Monogramme JA vert citron dans un carré arrondi vert forêt, accompagné du nom Jihen Abbes Optique.</desc>
+<rect x="2" y="4" width="44" height="44" rx="15" fill="#20251d"/>
+<path d="M19.5 12v16.2c0 5.1-2.1 8-6.8 8-2.4 0-4.4-.8-5.9-2.4" fill="none" stroke="#c7ef52" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M20.5 37.5 28 13l8 24.5M23.2 28h9.5" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="36.5" cy="11.5" r="2.3" fill="#c7ef52"/>
+<text x="58" y="27" fill="#171816" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="-.6">Jihen Abbes</text>
+<text x="59" y="41" fill="#718032" font-family="Arial, sans-serif" font-size="8" font-weight="800" letter-spacing="2.9">OPTIQUE</text>
+</svg>
