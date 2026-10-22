@@ -1,203 +1,568 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f7f5f0">
-<title>Jihen Abbes Optique — Lentilles, solutions & gouttes en Tunisie</title>
-<meta name="description" content="Jihen Abbes Optique : lentilles de contact, solutions d’entretien et gouttes en Tunisie. Livraison en 24H.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#171816;--paper:#f7f5f0;--white:#fff;--muted:#74756f;--line:#e4e3dc;--green:#c7ef52;--dark:#20251d;--sans:"DM Sans",sans-serif;--display:Manrope,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
-.announcement{height:32px;background:var(--dark);color:white;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.04em}.announcement b{color:var(--green);margin-right:6px}.delivery{font-weight:800;color:var(--green)}
-header{height:70px;border-bottom:1px solid var(--line);background:#f7f5f0eF;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}.nav{height:100%;max-width:1180px;padding:0 24px;margin:auto;display:flex;align-items:center;justify-content:space-between}.logo{font:800 25px var(--display);letter-spacing:-1.5px}.logo i{font-style:normal;color:#77931c}.navcats{display:flex;gap:30px;font-size:12px;font-weight:700}.navcats a:hover{text-decoration:underline;text-underline-offset:4px}.navright{font-size:11px;color:#555}
-main{max-width:1180px;margin:0 auto;padding:0 24px}.intro{padding:32px 0 20px;display:flex;align-items:end;justify-content:space-between;gap:20px}.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#61731e;margin-bottom:9px}.intro h1{font:800 clamp(32px,4.2vw,54px)/1.02 var(--display);letter-spacing:-2px;margin:0;max-width:680px}.intro h1 span{background:var(--green);padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.intro p{font-size:12px;line-height:1.65;color:var(--muted);max-width:285px;margin:0 0 3px}
-.controls{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:14px 0 15px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{background:transparent;border:1px solid #d6d6cd;border-radius:30px;padding:8px 14px;font-size:11px;font-weight:700;color:#51534b}.filter.active,.filter:hover{background:var(--dark);color:#fff;border-color:var(--dark)}.sortnote{font-size:10px;color:var(--muted);white-space:nowrap}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{background:var(--white);border:1px solid var(--line);min-width:0;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 25px #1718160c}.visual{height:210px;position:relative;overflow:hidden;background:#f1eee7;display:grid;place-items:center}.productPhoto{width:100%;height:100%;object-fit:contain;padding:12px;display:block;mix-blend-mode:multiply}.visual.color{background:#e9eee3}.visual.clear{background:#e8edf0}.visual.solution{background:#e8ede4}.visual.drops{background:#eef0ec}.pill{position:absolute;top:12px;left:12px;border-radius:20px;padding:6px 9px;background:white;font-size:9px;font-weight:800;z-index:1}.heart{position:absolute;right:12px;top:11px;font-size:18px;color:#555;z-index:1}.lensPair{display:flex;align-items:center;gap:12px;transform:rotate(-8deg)}.lens{width:69px;height:69px;border-radius:50%;background:radial-gradient(circle at 50% 50%,#131916 0 17%,#536b45 19% 28%,#9bb57a 31% 54%,#647c55 63%,#d4dec5 67% 72%,#f8faf4 74%);border:5px solid #fff;box-shadow:0 12px 24px #2e392426,inset 0 0 0 1px #6e775d}.lens.blue{filter:hue-rotate(100deg)}.lens.gray{filter:saturate(.5)}.lens.hazel{filter:sepia(.45) hue-rotate(345deg)}.single{width:87px;height:87px}.box{width:128px;height:88px;border-radius:3px;background:linear-gradient(145deg,#fff,#ecefe8);border:1px solid #d9ded3;box-shadow:9px 12px 20px #30362c24;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#51604b;transform:rotate(-4deg)}.box strong{font:700 14px var(--display);letter-spacing:.1em}.box small{font-size:8px;letter-spacing:.15em;margin-top:7px}.bottle{height:139px;width:76px;border-radius:12px 12px 20px 20px;background:linear-gradient(90deg,#fafbf6,#e3eadf 70%,#d1dccb);border:1px solid #a8b6a2;box-shadow:9px 12px 20px #2632221c;position:relative;display:grid;place-items:center}.bottle:before{content:"";position:absolute;top:-17px;width:34px;height:17px;border:1px solid #9aa996;border-bottom:0;border-radius:6px 6px 0 0;background:#f5f6ef}.bottle:after{content:"";position:absolute;top:-23px;width:20px;height:7px;border-radius:3px;background:#879582}.bottle span{font:700 7px/1.5 var(--sans);letter-spacing:.08em;text-align:center;color:#485747;background:#d6e0d2;padding:11px 7px;border-radius:3px}.dropBottle{width:72px;height:132px;background:linear-gradient(90deg,#fff,#f4f5f2 70%,#dfe5df);border:1px solid #c6cec6;border-radius:14px 14px 19px 19px;box-shadow:9px 12px 20px #2632221c;position:relative;display:grid;place-items:center}.dropBottle:before{content:"";position:absolute;width:28px;height:22px;top:-19px;border-radius:6px 6px 1px 1px;background:#a6b2a3}.dropBottle:after{content:"";position:absolute;width:12px;height:9px;top:-27px;border-radius:4px 4px 0 0;background:#889486}.dropBottle span{font-size:8px;font-weight:800;color:#576c57;text-align:center;line-height:1.5}
-.details{padding:13px 14px 14px;display:flex;flex-direction:column;flex:1}.type{font-size:9px;color:#718032;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.name{font:700 15px/1.25 var(--display);margin:6px 0 7px;min-height:38px;letter-spacing:-.3px}.meta{font-size:10px;line-height:1.5;color:var(--muted);min-height:31px}.priceRow{display:flex;align-items:baseline;justify-content:space-between;gap:7px;margin:13px 0 10px}.price{font:800 23px var(--display);letter-spacing:-.7px;white-space:nowrap}.price small{font:600 10px var(--sans);letter-spacing:0}.source{font-size:9px;color:var(--muted);text-align:right}.buy{margin-top:auto;display:block;text-align:center;background:var(--dark);color:white;padding:11px 10px;font-size:10px;font-weight:800}.buy:hover{background:#404937}.fine{padding:12px 14px 15px;border-top:1px solid #f0efe9;font-size:9px;color:#76766f;line-height:1.45}
-.disclaimer{margin:15px 0 0;background:#edece5;padding:12px 14px;font-size:10px;line-height:1.5;color:#62645c}.disclaimer strong{color:#272921}
-.benchmark{margin:50px 0 24px;padding:22px 24px;background:var(--dark);color:white;display:grid;grid-template-columns:1fr 2fr;gap:30px;align-items:start}.benchmark h2{font:700 21px var(--display);margin:4px 0;letter-spacing:-.7px}.benchmark p{font-size:10px;color:#d4d5ce;line-height:1.6;margin:7px 0 0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.stat{border-left:1px solid #596051;padding-left:14px}.stat b{font:800 19px var(--display);color:var(--green)}.stat span{display:block;color:#d4d5ce;font-size:9px;line-height:1.5;margin-top:4px}
-footer{border-top:1px solid var(--line);padding:24px 0 32px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:9px;line-height:1.6}.sources a{text-decoration:underline;text-underline-offset:3px;margin-right:10px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.visual{height:185px}.benchmark{grid-template-columns:1fr;gap:14px}}
-@media(max-width:650px){.announcement{font-size:9px}.nav{padding:0 16px}.navcats{gap:13px;font-size:10px}.navright{display:none}main{padding:0 15px}.intro{padding-top:23px;display:block}.intro h1{font-size:38px;letter-spacing:-1.7px}.intro p{max-width:100%;margin-top:11px}.controls{align-items:flex-start;flex-direction:column;gap:10px}.sortnote{white-space:normal}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.visual{height:148px}.lens{width:53px;height:53px}.single{width:68px;height:68px}.box{width:104px;height:70px}.bottle{transform:scale(.86)}.dropBottle{transform:scale(.85)}.details{padding:11px 10px}.name{font-size:13px;min-height:34px}.price{font-size:20px}.source{font-size:8px}.benchmark{padding:17px}.stats{gap:8px}.stat{padding-left:8px}.stat b{font-size:16px}.stat span{font-size:8px}footer{display:block}.sources{margin-top:12px}}
-@media(max-width:390px){.navcats{gap:8px;font-size:9px}.intro h1{font-size:34px}.visual{height:132px}.price{font-size:18px}}
-
-.navActions{display:flex;gap:8px}.navAction{border:1px solid var(--dark);border-radius:30px;background:var(--dark);color:white;padding:9px 14px;font-size:11px;font-weight:800}.navAction.adminLink{background:transparent;color:var(--dark)}.buy:disabled{background:#e6e5df;color:#787970;cursor:not-allowed}.priceRow .price{font-size:17px;white-space:normal}.source{max-width:96px}.panels{position:fixed;inset:0;background:#1118;z-index:30;display:flex;justify-content:flex-end}.panels[hidden]{display:none}.drawer{position:relative;width:min(540px,100%);height:100%;overflow:auto;background:var(--paper);padding:30px 24px 40px;box-shadow:-10px 0 40px #0002}.panelClose{position:absolute;right:18px;top:15px;border:0;background:transparent;font-size:32px;line-height:1}.drawer h2{font:800 28px var(--display);margin:0 0 18px}.drawer h3{font:700 17px var(--display);margin:24px 0 12px}.cartLine{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.cartLine img{width:64px;height:60px;object-fit:contain;background:white}.cartLine strong,.cartLine small{display:block}.cartLine small{font-size:11px;color:var(--muted);margin-top:4px}.cartLine>b{font-size:12px;white-space:nowrap}.qty{display:flex;align-items:center;gap:12px;margin-top:8px}.qty button{border:1px solid var(--line);background:white;width:25px;height:25px;border-radius:50%}.emptyCart{padding:18px;background:white;color:var(--muted);font-size:13px}.cartGrand{display:flex;justify-content:space-between;padding:17px 0;border-bottom:1px solid var(--line);font-size:16px}.checkoutForm label{display:block;font-size:12px;font-weight:700;margin:11px 0}.checkoutForm input,.adminProduct input:not([type=checkbox]){display:block;width:100%;margin-top:5px;padding:11px;border:1px solid #d5d6ce;background:white;border-radius:3px;font:inherit}.submitOrder{width:100%;margin-top:12px;padding:13px;border:0;background:var(--dark);color:white;font-weight:800}.localNotice,.adminWarning{padding:11px;background:#fff1c8;color:#594d28;font-size:11px;line-height:1.5}.noticeSuccess{padding:14px;background:#e5efd5;font-size:12px;line-height:1.6}.adminWarning{margin:8px 0 18px}.adminProduct{display:grid;grid-template-columns:54px minmax(100px,1fr) 85px 75px 96px;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.adminProduct>img{width:54px;height:48px;object-fit:contain;background:white}.adminName b,.adminName small{display:block}.adminName b{font-size:11px}.adminName small{font-size:9px;color:var(--muted);margin-top:4px}.adminProduct label{font-size:9px;font-weight:700}.adminProduct input:not([type=checkbox]){padding:7px 5px;font-size:11px}.adminProduct .availability{display:flex;align-items:center;gap:5px}.exportOrders{padding:9px 12px;border:1px solid var(--dark);background:transparent;font-size:11px;font-weight:700}.orderCard{background:white;border:1px solid var(--line);padding:12px;margin:10px 0;font-size:11px}.orderTop{display:flex;justify-content:space-between;align-items:center;gap:7px;flex-wrap:wrap}.orderTop select{padding:6px}.orderCard p{line-height:1.6}.orderCard ul{padding-left:18px;line-height:1.6}
-@media(max-width:650px){.navActions{gap:5px}.navAction{padding:8px 10px;font-size:10px}.drawer{padding:28px 15px}.adminProduct{grid-template-columns:42px minmax(70px,1fr) 72px 60px}.adminProduct>img{width:42px;height:42px}.adminProduct .availability{grid-column:2/-1}.navcats{gap:9px}.nav{padding:0 10px}}
-
-.submitOrder:disabled{opacity:.5;cursor:not-allowed}
-.logo{display:inline-flex;align-items:center;letter-spacing:0;white-space:nowrap}.brandLogo{display:block;width:186px;height:auto}.logoMark{width:42px;height:42px;flex:none}.logoName{font:800 16px/1.05 var(--display);letter-spacing:-.55px;color:var(--ink)}.logoName small{display:block;font:800 8px/1.2 var(--sans);letter-spacing:.24em;color:#718032;margin-top:4px}
-@media(max-width:650px){.logo{gap:5px}.brandLogo{width:139px}.navcats{gap:6px;font-size:9px}.navAction{padding:7px 8px;font-size:9px}}
-
-/* Keep the shop navigation usable on narrow phones. */
-@media(max-width:650px){
- html{scroll-padding-top:112px}
- header{height:auto}
- .announcement{gap:5px;white-space:nowrap;font-size:10px;padding:0 8px}
- .announcementClaim{display:none}
- .nav{height:auto;min-height:94px;padding:0 15px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:54px 40px;column-gap:8px}
- .logo{grid-column:1;grid-row:1;min-width:0}
- .brandLogo{width:139px;max-width:100%}
- .navActions{grid-column:2;grid-row:1;justify-self:end}
- .navcats{grid-column:1/-1;grid-row:2;height:40px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);font-size:11px}
- .navcats a{white-space:nowrap;padding:10px 0}
- .priceRow{display:block}
- .priceRow .price{display:block;font-size:18px}
- .source{max-width:none;text-align:left;margin-top:4px}
-}
-@media(max-width:360px){.brandLogo{width:126px}.nav{padding:0 10px}.navAction{padding:7px 6px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f2">
+  <meta name="description" content="Vos lentilles du quotidien, simplement. Découvrez une sélection de lentilles confortables, livrées chez vous.">
+  <title>iris by Jihen Abbes — Catalogue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#18221f;--muted:#6d7772;--paper:#f7f7f2;--white:#fff;--line:#e6e8df;--green:#d9ddd5;--lime:#e8e9e4;--coral:#b77c68;--lav:#ecebe8;--r:24px;--shadow:0 16px 45px #23372b14}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}button,a,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+    .announce{height:36px;display:flex;align-items:center;justify-content:center;background:var(--ink);color:#f3f5ec;font-size:11px;letter-spacing:.04em}.announce b{color:var(--green);font-weight:600;margin:0 5px}
+    header{position:sticky;top:0;z-index:20;background:#f7f7f2ed;backdrop-filter:blur(14px);border-bottom:1px solid #e6e8df99}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:26px}.brand{font:800 28px Manrope,sans-serif;letter-spacing:-2px;display:flex;align-items:center;gap:7px}.brand-mark{width:26px;height:26px;border:6px solid var(--coral);border-radius:50%;position:relative}.brand-mark:after{content:'';position:absolute;inset:4px;border-radius:50%;background:var(--green)}.navlinks{display:flex;align-items:center;gap:29px;font-size:13px;color:#4e5953}.navlinks a:hover{color:#111}.navright{display:flex;gap:11px;align-items:center}.iconbtn{width:40px;height:40px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:transparent;color:var(--ink);position:relative}.iconbtn:hover{background:white}.cart-count{position:absolute;right:-3px;top:-4px;width:17px;height:17px;border-radius:50%;background:var(--coral);color:white;font-size:10px;display:grid;place-items:center}.menu-toggle{display:none}
+    .hero{padding:35px 0 22px}.hero-panel{min-height:490px;border-radius:32px;overflow:hidden;position:relative;display:grid;grid-template-columns:1fr 1fr;background:#dff0cb}.hero-copy{padding:68px 0 60px 68px;position:relative;z-index:2;max-width:580px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}.eyebrow:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--coral)}h1,h2,h3,p{margin-top:0}h1{font:600 clamp(42px,5.6vw,72px)/.99 Manrope,sans-serif;letter-spacing:-4.3px;margin:20px 0 18px;max-width:480px}h1 em{font-style:normal;color:#477a40} .hero-copy>p{font-size:16px;line-height:1.65;color:#4b5d4b;max-width:360px;margin-bottom:27px}.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.btn{border:0;min-height:50px;padding:0 22px;border-radius:999px;background:var(--ink);color:white;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px);background:#34443c}.btn-light{background:#ffffffb3;color:var(--ink);border:1px solid #ffffff}.btn-light:hover{background:white}.proof{margin-top:24px;display:flex;align-items:center;gap:10px;font-size:11px;color:#50624c}.stars{color:#b37128;letter-spacing:2px;font-size:14px}.hero-art{position:absolute;inset:0 0 0 49%;overflow:hidden}.hero-photo{position:absolute;inset:16px 18px 16px 16px;border-radius:260px 260px 20px 20px;background:#d1e7bd url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85') center 37%/cover}.hero-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#dff0cb33,transparent 48%)}.sun-disc{position:absolute;width:156px;height:156px;border-radius:50%;background:var(--coral);right:5px;top:18px;mix-blend-mode:multiply;opacity:.82}.lens-float{position:absolute;width:154px;height:154px;border-radius:50%;border:1px solid #ffffffb8;background:linear-gradient(140deg,#ffffffce,#ffffff22);backdrop-filter:blur(8px);right:37%;bottom:23px;box-shadow:0 18px 50px #435c3530}.lens-float:before{content:'';position:absolute;inset:24px;border:12px solid #ffffffa1;border-radius:50%;box-shadow:inset 6px 4px 14px #5a9d7e38,3px 5px 16px #617d7c40}.float-tag{position:absolute;right:23px;bottom:41px;padding:12px 16px;background:#fff;color:#28332b;border-radius:14px;font-size:11px;box-shadow:var(--shadow)}.float-tag strong{display:block;font-size:14px;margin-top:3px}
+    .trustbar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:18px 0 31px}.trust-item{display:flex;align-items:center;justify-content:center;gap:10px;color:#56615c;font-size:11px}.trust-icon{width:32px;height:32px;border-radius:50%;background:#e9eddf;display:grid;place-items:center;color:#48654d;font-size:15px}
+    .section{padding:34px 0 54px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:21px}.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:9px}.section h2{font:600 clamp(27px,3vw,38px)/1.1 Manrope,sans-serif;letter-spacing:-1.6px;margin:0}.text-link{font-weight:700;font-size:12px;border-bottom:1px solid;padding-bottom:5px;white-space:nowrap}.category-row{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.category{border:0;text-align:left;padding:0;background:transparent;cursor:pointer}.category-art{height:168px;border-radius:20px;display:grid;place-items:center;overflow:hidden;transition:transform .25s}.category:hover .category-art{transform:translateY(-3px)}.category-art svg{width:80px;height:80px;filter:drop-shadow(0 12px 14px #31472d1b)}.cat-1{background:#dff0cb}.cat-2{background:#fee2d9}.cat-3{background:#e7e2ff}.cat-4{background:#f7edc9}.category h3{font-size:14px;margin:13px 0 4px}.category p{font-size:11px;color:var(--muted);margin:0}
+    .bestsellers{padding:50px 0 63px;background:#eef0e8}.catalog-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.filters{display:flex;gap:7px;overflow:auto;scrollbar-width:none;margin-bottom:0;flex:1;min-width:0}.sort-control{display:flex;align-items:center;gap:8px;flex:none;font-size:10px;color:#667069}.sort-control select{height:34px;padding:0 10px;border:1px solid #dfe2d8;border-radius:999px;background:#fff;color:var(--ink);font-size:10px}.filters::-webkit-scrollbar{display:none}.filter{border:1px solid #dfe2d8;background:transparent;border-radius:999px;padding:9px 15px;white-space:nowrap;font-size:11px;color:#667069}.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.product{border-radius:20px;background:#fff;padding:12px;min-width:0;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.product[hidden]{display:none}.product-art{height:174px;border-radius:14px;display:grid;place-items:center;position:relative;overflow:hidden}.product-art.has-photo:before,.product-art.has-photo:after{display:none}.product-photo{width:100%;height:100%;object-fit:contain;padding:12px}.product-art:before{content:'';width:102px;height:102px;border-radius:50%;background:linear-gradient(140deg,#ffffffce,#ffffff14);border:1px solid #fff9;box-shadow:inset 9px 6px 18px #4e7e6b30,4px 12px 22px #445d4c26}.product-art:after{content:'';position:absolute;width:62px;height:62px;border-radius:50%;border:9px solid #ffffffa8;box-shadow:inset 4px 4px 10px #619b7d44}.pa1{background:#dceeca}.pa2{background:#ffe2d7}.pa3{background:#e3e2fc}.pa4{background:#f1eacb}.badge{position:absolute;top:10px;left:10px;background:white;padding:6px 9px;border-radius:30px;font-size:9px;font-weight:700}.quick-add{position:absolute;bottom:10px;right:10px;width:34px;height:34px;border:0;border-radius:50%;background:var(--ink);color:white;font-size:20px;line-height:1}.product-info{padding:13px 3px 3px}.brand-small{font-size:9px;color:#849087;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:5px}.product-title{font-size:13px;font-weight:700;margin:0 0 5px}.rating{font-size:10px;color:#8a928c}.rating span{color:#b37128;letter-spacing:1px}.product-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:13px}.price{font-size:14px;font-weight:700}.per{font-size:10px;color:#8a928c}
+    .split{padding:64px 0}.split-panel{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px;background:#fff;border-radius:28px;padding:18px}.split-visual{min-height:315px;border-radius:20px;background:#f5cfc3;position:relative;overflow:hidden;display:grid;place-items:center}.split-visual img{width:100%;height:100%;position:absolute;object-fit:cover;inset:0;mix-blend-mode:multiply;opacity:.88}.circle-note{position:absolute;top:18px;left:18px;border-radius:50%;width:82px;height:82px;background:var(--green);display:grid;place-items:center;text-align:center;font-size:10px;font-weight:700;line-height:1.25;transform:rotate(-9deg)}.split-copy{padding:30px 8% 30px 0}.split-copy h2{font:600 clamp(30px,3vw,42px)/1.07 Manrope,sans-serif;letter-spacing:-2px;margin:16px 0}.split-copy p{font-size:13px;color:var(--muted);line-height:1.7;max-width:380px;margin-bottom:23px}.step-no{width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#eef0e8;font-size:11px;font-weight:700}.steps{display:flex;gap:10px;flex-direction:column;margin-bottom:24px}.step{display:flex;align-items:center;gap:10px;font-size:12px}
+    .quote{padding:28px 0 70px}.quote-panel{background:var(--lav);border-radius:28px;padding:46px 18px;text-align:center}.quote-panel .stars{margin-bottom:15px}.quote-panel blockquote{font:500 clamp(22px,3vw,34px)/1.3 Manrope,sans-serif;letter-spacing:-.7px;max-width:690px;margin:0 auto 17px}.quote-panel cite{font-style:normal;font-size:11px;color:#667069}.newsletter{padding:0 0 60px}.newsletter-panel{background:var(--green);border-radius:24px;padding:34px 38px;display:flex;align-items:center;justify-content:space-between;gap:20px}.newsletter h2{font:700 24px Manrope,sans-serif;letter-spacing:-1px;margin:0 0 6px}.newsletter p{font-size:12px;color:#495841;margin:0}.email-form{display:flex;gap:8px;background:white;border-radius:999px;padding:5px;min-width:min(400px,100%)}.email-form input{border:0;background:transparent;outline:0;padding:0 13px;flex:1;min-width:90px;font-size:12px}.email-form button{border:0;border-radius:999px;background:var(--ink);color:white;padding:0 17px;font-size:11px;font-weight:700;min-height:40px}
+    footer{background:#1b2621;color:#f4f6ef;padding:38px 0 21px}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;padding-bottom:35px}.footer-brand{color:white}.footer-about{font-size:11px;line-height:1.7;color:#aab2aa;max-width:260px;margin-top:14px}.footer-col h4{font-size:11px;margin:4px 0 14px}.footer-col a{display:block;font-size:10px;color:#aab2aa;margin:10px 0}.footer-col a:hover{color:var(--green)}.footer-bottom{border-top:1px solid #ffffff25;padding-top:17px;display:flex;justify-content:space-between;color:#aab2aa;font-size:9px}.toast{position:fixed;left:50%;bottom:28px;z-index:50;transform:translate(-50%,20px);background:var(--ink);color:white;border-radius:999px;padding:13px 19px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}.drawer-backdrop{position:fixed;inset:0;background:#15211e66;z-index:40;opacity:0;pointer-events:none;transition:.25s}.drawer-backdrop.open{opacity:1;pointer-events:auto}.cart-drawer{position:absolute;right:0;top:0;height:100%;width:min(410px,100%);background:var(--paper);padding:25px;transform:translateX(100%);transition:.28s;display:flex;flex-direction:column}.drawer-backdrop.open .cart-drawer{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:17px}.drawer-head h3{margin:0;font:700 20px Manrope}.close{border:0;background:transparent;font-size:23px}.cart-list{flex:1;overflow:auto;padding:12px 0}.cart-line{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:12px}.cart-line small{display:block;color:var(--muted);margin-top:5px}.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:white;border-radius:50%;width:24px;height:24px}.cart-foot{border-top:1px solid var(--line);padding-top:16px}.subtotal{display:flex;justify-content:space-between;font-weight:700;font-size:14px;margin-bottom:15px}.cart-empty{font-size:13px;color:var(--muted);text-align:center;margin:auto}.search-box{position:absolute;top:72px;left:0;right:0;background:var(--paper);padding:17px max(24px,calc((100% - 1160px)/2));display:none;border-bottom:1px solid var(--line)}.search-box.open{display:flex}.search-box input{flex:1;border:1px solid var(--line);border-radius:999px;padding:13px 18px;background:white;outline:none}.search-box button{margin-left:8px}
+    @media(max-width:760px){.wrap{width:calc(100% - 32px)}.announce{height:32px;font-size:10px}.nav{height:62px}.brand{font-size:25px}.navlinks{display:none}.navlinks.open{position:absolute;display:flex;left:16px;right:16px;top:61px;flex-direction:column;align-items:stretch;gap:0;padding:8px 16px;background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.navlinks.open a{padding:13px 4px;border-bottom:1px solid var(--line)}.navlinks.open a:last-child{border:0}.menu-toggle{display:grid}.navright{gap:7px}.iconbtn{width:37px;height:37px}.hero{padding:16px 0 8px}.hero-panel{min-height:655px;display:block;border-radius:24px}.hero-copy{padding:33px 24px 0}.eyebrow{font-size:9px}h1{font-size:48px;letter-spacing:-3px;max-width:370px;margin:17px 0 12px}.hero-copy>p{font-size:13px;line-height:1.55;max-width:290px;margin-bottom:17px}.btn{min-height:46px;padding:0 18px;font-size:12px}.proof{margin-top:15px;font-size:10px}.hero-art{inset:310px 0 0 10%;}.hero-photo{inset:0 14px 0 24px;border-radius:180px 180px 16px 16px;background-position:center 34%}.sun-disc{width:105px;height:105px;right:4px;top:12px}.lens-float{width:105px;height:105px;right:48%;bottom:12px}.lens-float:before{inset:17px;border-width:8px}.float-tag{right:15px;bottom:20px;padding:10px 13px}.trustbar{grid-template-columns:repeat(2,1fr);gap:13px 4px;padding:17px 0 21px}.trust-item{justify-content:flex-start;font-size:10px}.trust-icon{width:29px;height:29px}.section{padding:29px 0 38px}.section-head{margin-bottom:16px}.section h2{font-size:28px}.kicker{font-size:9px}.text-link{font-size:11px}.category-row{grid-template-columns:repeat(2,1fr);gap:17px 10px}.category-art{height:132px;border-radius:16px}.category-art svg{width:63px;height:63px}.category h3{font-size:12px;margin:10px 0 4px}.category p{font-size:10px}.bestsellers{padding:35px 0 42px}.catalog-toolbar{align-items:flex-start;flex-direction:column;gap:10px;margin:0 -16px 15px}.filters{width:100%;margin:0;padding:0 16px}.sort-control{align-self:flex-end;margin-right:16px}.filter{padding:8px 12px;font-size:10px}.products{grid-template-columns:repeat(2,1fr);gap:10px}.product{padding:8px;border-radius:16px}.product-art{height:145px;border-radius:12px}.product-art:before{width:86px;height:86px}.product-art:after{width:53px;height:53px;border-width:7px}.badge{font-size:8px;top:8px;left:8px}.quick-add{width:31px;height:31px}.product-info{padding:10px 2px 3px}.product-title{font-size:11px}.brand-small{font-size:8px}.rating{font-size:9px}.product-bottom{margin-top:10px}.price{font-size:13px}.per{font-size:9px}.split{padding:38px 0}.split-panel{grid-template-columns:1fr;gap:0;padding:10px;border-radius:22px}.split-visual{min-height:230px;border-radius:15px}.split-copy{padding:23px 13px 18px}.split-copy h2{font-size:31px}.split-copy p{font-size:12px}.quote{padding:8px 0 42px}.quote-panel{padding:33px 18px;border-radius:22px}.quote-panel blockquote{font-size:22px}.newsletter{padding-bottom:37px}.newsletter-panel{padding:25px 20px;display:block;border-radius:20px}.newsletter h2{font-size:21px}.newsletter p{font-size:11px;margin-bottom:16px}.email-form{min-width:0}.email-form input{font-size:11px}.email-form button{padding:0 13px;font-size:10px}footer{padding-top:30px}.footer-top{grid-template-columns:1fr 1fr;gap:26px 15px;padding-bottom:24px}.footer-about{max-width:210px}.footer-bottom{gap:10px;line-height:1.5}.search-box{top:62px;padding:12px 16px}}
+    @media(max-width:360px){h1{font-size:42px}.hero-panel{min-height:665px}.hero-art{inset:330px 0 0 5%}.trust-item{font-size:9px}.category-art{height:115px}}
+  </style>
+  <style>
+    body > main > .hero, body > main > .trustbar, body > main > .wrap.section { display:none; }
+    body > main > .bestsellers { padding-top:34px; }
+    .brand-word { display:flex; flex-direction:column; line-height:.86; }
+    .brand-word small { font:600 8px/1.2 'DM Sans',sans-serif; letter-spacing:.01em; margin-left:1px; white-space:nowrap; }
+    .footer-brand { position:relative; padding-bottom:10px; }
+    .footer-brand::after { content:'by Jihen Abbes'; position:absolute; left:33px; bottom:0; font:600 8px/1.2 'DM Sans',sans-serif; white-space:nowrap; }
+    .quote, .newsletter { display:none; }
+  </style>
+  <style>
+    .new-categories{padding:6px 0 54px}.new-category-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.new-category-card{position:relative;min-height:190px;overflow:hidden;border-radius:22px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end}.new-category-card h3{font:700 23px Manrope,sans-serif;letter-spacing:-.7px;margin:8px 0}.new-category-card p{max-width:260px;margin:0;font-size:11px;line-height:1.5;color:#56625b}.new-category-card.lashes{background:#e8e4ff}.new-category-card.accessories{background:#e4f1d6}.new-category-kicker{font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:#68716b}.soon-pill{position:absolute;top:17px;right:17px;background:#fff;padding:8px 11px;border-radius:99px;font-size:9px;font-weight:800;letter-spacing:.04em}.lash-art{position:absolute;right:38px;top:26px;width:120px;height:60px;border-top:4px solid #333344;border-radius:50%;transform:rotate(-8deg)}.lash-art:before,.lash-art:after{content:'';position:absolute;top:-9px;width:2px;height:20px;background:#333344;transform:rotate(-20deg);box-shadow:13px -4px #333344,26px -6px #333344,39px -5px #333344,52px -2px #333344,65px 2px #333344,78px 4px #333344}.lash-art:after{right:0;transform:rotate(22deg)}.case-art{position:absolute;right:38px;top:26px;width:83px;height:55px;border-radius:30px 30px 22px 22px;background:#ffffffb8;border:1px solid #ffffff;box-shadow:0 12px 23px #49683c20;transform:rotate(-8deg)}.case-art:before{content:'';position:absolute;top:14px;left:13px;right:13px;height:1px;background:#c6d6b7}.case-art:after{content:'iris';position:absolute;left:29px;top:23px;font:700 10px Manrope;color:#607855}.category-action{border:0;padding:0;margin-top:15px;background:transparent;text-align:left;font-weight:700;font-size:10px;color:#2e4133}.category-action:hover{text-decoration:underline}
+    .catalog-empty{margin:0 0 18px;padding:25px;border-radius:17px;background:#e8e4ff;text-align:center}.catalog-empty[hidden]{display:none}.catalog-empty strong{display:block;font:700 19px Manrope;margin:8px}.catalog-empty p{font-size:11px;color:#646574;margin:0}
+    @media(max-width:760px){.new-categories{padding:0 0 38px}.new-category-grid{grid-template-columns:1fr;gap:10px}.new-category-card{min-height:155px;padding:21px}.new-category-card h3{font-size:20px}.lash-art{right:32px;top:25px;transform:scale(.8) rotate(-8deg);transform-origin:top right}.case-art{right:27px;top:22px;transform:scale(.85) rotate(-8deg);transform-origin:top right}}
+  </style>
+  <style id="dynamic-minimal-style">
+    :root{
+      --ink:#111713;--muted:#68716b;--paper:#f5f6f2;--white:#fff;--line:#dfe4dc;
+      --green:#d9ddd5;--lime:#e8e9e4;--coral:#b77c68;--lav:#ecebe8;
+      --r:18px;--shadow:0 18px 46px #15231b14
+    }
+    body{background:var(--paper);color:var(--ink);letter-spacing:-.01em}
+    .wrap{width:min(1240px,calc(100% - 56px))}
+    .announce{height:34px;background:var(--ink);color:#f5f3ee;font-size:10px;font-weight:600;letter-spacing:.07em;text-transform:uppercase}
+    .announce b{color:#d7a08e;font-weight:700}
+    header{background:#f5f6f2eF;border-bottom:1px solid #dfe4dccc}
+    .nav{height:76px}
+    .brand{font-size:30px;letter-spacing:-2.3px}
+    .brand-mark{width:25px;height:25px;border:5px solid var(--ink)}
+    .brand-mark:after{inset:4px;background:#f28c28}
+    .navlinks{gap:32px;font-size:12px;font-weight:600;color:#515a54}
+    .navlinks a{position:relative;transition:color .18s}
+    .navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--green);transition:right .2s}
+    .navlinks a:hover{color:var(--ink)}
+    .navlinks a:hover:after{right:0}
+    .iconbtn{width:42px;height:42px;border-color:var(--line);background:#fff;transition:transform .18s,background .18s,border-color .18s}
+    .iconbtn:hover{background:#eceee9;border-color:#d8ddd7;transform:translateY(-2px)}
+    .cart-count{background:var(--coral);color:#fff}
+    .bestsellers{padding:48px 0 76px;background:var(--paper)}
+    .section-head{margin-bottom:26px}
+    .kicker{font-size:9px;letter-spacing:.17em;color:#6b756e}
+    .section h2{font-size:clamp(32px,4vw,48px);letter-spacing:-2.5px;font-weight:700}
+    .text-link{font-size:11px;border-bottom:1px solid var(--ink);transition:color .18s,border-color .18s}
+    .text-link:hover{color:#648719;border-color:var(--green)}
+    .catalog-toolbar{gap:18px;margin-bottom:25px}
+    .filters{gap:8px}
+    .filter{padding:10px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#626b65;font-size:10px;font-weight:600;transition:background .18s,color .18s,border-color .18s,transform .18s}
+    .filter:hover{background:#f0f0ec;color:var(--ink);border-color:#cbd0ca;transform:translateY(-1px)}
+    .filter.active{background:var(--ink);border-color:var(--ink);color:#fff}
+    .catalog-toolbar{position:relative}
+    .advanced-filter-toggle{height:38px;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:10px;font-weight:700;transition:background .18s,border-color .18s,transform .18s}
+    .advanced-filter-toggle:hover,.advanced-filter-toggle[aria-expanded="true"]{background:#f0f0ec;border-color:#cbd0ca}
+    .advanced-filter-toggle:hover{transform:translateY(-1px)}
+    .filter-count{min-width:17px;height:17px;padding:0 5px;display:inline-grid;place-items:center;border-radius:99px;background:#f28c28;color:#fff;font-size:9px}
+    .advanced-filter-panel{position:absolute;top:calc(100% + 8px);right:0;z-index:30;width:min(560px,calc(100vw - 40px));max-height:min(65vh,520px);overflow:auto;padding:17px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 18px 46px #15231b1c}
+    .advanced-filter-panel[hidden]{display:none}
+    .advanced-filter-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:12px}
+    .advanced-filter-reset{padding:5px 0;border:0;background:none;color:#8b5947;font-size:10px;font-weight:700}
+    .advanced-filter-reset:hover{text-decoration:underline}
+    .advanced-filter-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 18px}
+    .filter-group{min-width:0;margin:0;padding:0;border:0}
+    .filter-group legend{margin-bottom:8px;color:#68716b;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .filter-group-options{display:grid;gap:7px;max-height:145px;overflow:auto}
+    .filter-option{display:flex;align-items:center;gap:8px;min-width:0;color:#323a34;font-size:10px;line-height:1.35;cursor:pointer}
+    .filter-option input{width:14px;height:14px;margin:0;accent-color:#b77c68;flex:none}
+    .filter-option span{overflow-wrap:anywhere}
+    .sort-control{gap:9px;color:#667069;font-size:10px;font-weight:600;white-space:nowrap}
+    .sort-control select{height:38px;padding:0 14px;border:1px solid #cfd6cd;border-radius:999px;background:#fff;color:var(--ink);font-size:10px;font-weight:600;transition:border-color .18s,box-shadow .18s}
+    .sort-control select:hover,.sort-control select:focus{border-color:var(--ink);box-shadow:0 0 0 3px #b77c681f;outline:0}
+    .products{gap:16px}
+    .product{padding:10px;border:1px solid #e6e9e2;border-radius:17px;box-shadow:0 2px 8px #15231b05;transition:transform .22s,border-color .22s,box-shadow .22s}
+    .product:hover{transform:translateY(-5px);border-color:#cbd4c5;box-shadow:0 16px 34px #15231b12}
+    .product-art{height:190px;border-radius:12px;background:#f0f2ed}
+    .pa1{background:#edf4e4}.pa2{background:#f8eee9}.pa3{background:#eef0fa}.pa4{background:#f4f1e5}
+    .product-photo{padding:10px}
+    .badge{top:9px;left:9px;padding:7px 10px;border-radius:999px;background:#fff;font-size:8px;letter-spacing:.06em}
+    .quick-add{width:38px;height:38px;right:9px;bottom:9px;background:var(--ink);transition:background .18s,color .18s,transform .18s}
+    .quick-add:hover{background:var(--coral);color:#fff;transform:rotate(90deg)}
+    .product-info{padding:15px 4px 4px}
+    .brand-small{color:#78827b;font-size:8px;letter-spacing:.14em}
+    .product-title{font-size:14px;letter-spacing:-.02em}
+    .rating{font-size:9px;color:#778078}
+    .rating span{color:#e69a32}
+    .product-bottom{margin-top:14px}
+    .price{font-size:15px;font-weight:800;letter-spacing:-.03em}
+    .per{font-size:9px}
+    .new-categories{padding:0 0 62px}
+    .new-categories .section-head{margin-bottom:18px}
+    .new-category-card{min-height:205px;border-radius:17px;padding:27px;background:#e9f0df;transition:transform .22s,box-shadow .22s}
+    .new-category-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .new-category-card.accessories{background:#e5e8df}
+    .new-category-kicker{color:#4f5c4d;letter-spacing:.16em}
+    .new-category-card h3{font-size:26px;letter-spacing:-1.1px}
+    .new-category-card p{color:#4e5c4d;font-size:12px}
+    .soon-pill{background:var(--ink);color:#fff;border-radius:999px;font-size:8px;letter-spacing:.1em}
+    .case-art{border-radius:17px;background:#ffffffd9;border-color:#fff;box-shadow:0 12px 28px #17221919}
+    .case-art:after{color:#788477}
+    .category-action{margin-top:19px;font-size:11px}
+    .split{padding:58px 0 72px}
+    .split-panel{gap:48px;padding:14px;border-radius:20px;background:var(--ink);color:#fff}
+    .split-visual{min-height:350px;border-radius:12px;background:#dfe7d7}
+    .split-visual img{mix-blend-mode:normal;opacity:.9}
+    .circle-note{width:88px;height:88px;background:var(--green);color:var(--ink);font-size:9px}
+    .split-copy{padding:35px 8% 35px 0}
+    .split-copy .kicker{color:#c2cbbe}
+    .split-copy h2{font-size:clamp(34px,4vw,52px);letter-spacing:-2.8px}
+    .split-copy p{color:#b8c1b9;font-size:13px}
+    .step{color:#edf1eb;font-size:12px}
+    .step-no{background:#d9ddd5;color:var(--ink);font-size:10px}
+    .btn{border-radius:999px;background:var(--ink);color:#fff;font-weight:700;transition:transform .18s,background .18s}
+    .btn:hover{transform:translateY(-2px);background:#34403a;color:#fff}
+    .btn-light{background:transparent;color:var(--ink);border:1px solid #ffffffaa}
+    .btn-light:hover{background:#fff;color:var(--ink)}
+    .catalog-empty{border:1px solid #d9dff8;border-radius:16px;background:#edf0ff}
+    footer{background:#111713}
+    .footer-col a{transition:color .18s,transform .18s}
+    .footer-col a:hover{color:#d7a08e;transform:translateX(3px)}
+    .toast{border-radius:14px;background:var(--ink);box-shadow:0 18px 46px #11171333}
+    .cart-drawer{background:#fbfcf9}
+    .drawer-head,.cart-foot{border-color:var(--line)}
+    .search-box{background:#fbfcf9;box-shadow:0 16px 30px #1117130c}
+    .search-box input{border-radius:12px}
+    :focus-visible{outline:2px solid #b77c68;outline-offset:3px}
+    @media(max-width:760px){
+      .wrap{width:calc(100% - 32px)}
+      .nav{height:64px}
+      .brand{font-size:26px}
+      .bestsellers{padding:34px 0 52px}
+      .section-head{align-items:flex-start}
+      .section h2{font-size:34px}
+      .catalog-toolbar{position:sticky;top:68px;z-index:20;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"categories categories" "filters sort";align-items:center;gap:9px 8px;margin-left:-8px;margin-right:-8px;margin-bottom:20px;padding:9px 8px;border:1px solid #dfe4dce8;border-radius:15px;background:#f5f6f2ed;backdrop-filter:blur(12px);box-shadow:0 8px 24px #15231b0c}
+      .catalog-toolbar>.filters{grid-area:categories;width:100%;min-width:0;padding:0 0 2px}
+      .catalog-toolbar>.sort-control{grid-area:sort;justify-self:end;margin:0;gap:5px}
+      .catalog-toolbar>.sort-control span{display:none}
+      .catalog-toolbar>.sort-control select{height:36px;max-width:150px;padding:0 11px}
+      .advanced-filter-toggle{grid-area:filters;justify-self:start;height:36px}
+      .advanced-filter-panel{position:absolute;top:calc(100% + 8px);left:0;right:0;width:auto;max-height:min(65vh,520px)}
+      .advanced-filter-groups{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .filters{padding:0 16px}
+      .filter{padding:9px 13px}
+      .products{gap:10px}
+      .product{padding:8px;border-radius:14px}
+      .product-art{height:154px}
+      .product-info{padding:12px 3px 3px}
+      .product-title{font-size:12px}
+      .new-categories{padding-bottom:36px}
+      .new-category-card{min-height:170px;padding:22px}
+      .split{padding:30px 0 44px}
+      .split-panel{gap:0;padding:9px;border-radius:17px}
+      .split-visual{min-height:245px}
+      .split-copy{padding:25px 14px 20px}
+      .split-copy h2{font-size:35px}
+    }
+    @media(max-width:430px){
+      .wrap{width:calc(100% - 26px)}
+      .section-head{gap:10px}
+      .section h2{font-size:30px}
+      .catalog-toolbar{margin-left:-13px;margin-right:-13px}
+      .sort-control{margin-right:13px}
+      .product-art{height:138px}
+      .badge{font-size:7px}
+      .quick-add{width:33px;height:33px}
+      .split-visual{min-height:215px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
+  </style>
 </head>
 <body>
-<div class="announcement"><b>JIHEN ABBES OPTIQUE</b><span class="announcementClaim">· N°1 DES LENTILLES EN TUNISIE</span><span class="delivery">· LIVRAISON EN 24H</span></div>
-<header><div class="nav"><a class="logo" href="#" aria-label="Jihen Abbes Optique — accueil"><img class="brandLogo" src="./assets/jihen-abbes-optique.svg" alt="Jihen Abbes Optique"></a><nav class="navcats"><a href="#catalogue" data-jump="lens">Lentilles</a><a href="#catalogue" data-jump="solutions">Solutions</a><a href="#catalogue" data-jump="drops">Gouttes</a></nav><div class="navActions"><button id="cartOpen" class="navAction">Panier <span id="cartCount">0</span></button><button id="adminOpen" class="navAction adminLink" hidden>Admin</button></div></div></header>
-<main>
-<section class="intro"><div><div class="kicker">Lentilles · Solutions · Gouttes</div><h1>Le N°1 des lentilles<br><span>en Tunisie.</span></h1></div><p>Lentilles de contact, solutions d’entretien et gouttes : l’essentiel pour vos yeux, livré en 24H.</p></section>
-<section id="catalogue">
-<div class="controls"><div class="filters" aria-label="Filtrer les produits"><button class="filter active" data-filter="all">Tout voir</button><button class="filter" data-filter="lens">Lentilles</button><button class="filter" data-filter="solutions">Solutions</button><button class="filter" data-filter="drops">Gouttes</button></div></div>
-<div class="grid" id="grid"></div>
-<div class="disclaimer">Avant de commander, vérifiez votre correction et suivez la notice de vos lentilles et produits d’entretien.</div>
-</section>
-<footer><div><a class="logo" href="#" aria-label="Jihen Abbes Optique — accueil"><img class="brandLogo" src="./assets/jihen-abbes-optique.svg" alt="Jihen Abbes Optique"></a><br>Lentilles de contact · Solutions · Gouttes</div><div>© 2026 Jihen Abbes Optique</div></footer>
-
-<div id="panels" class="panels" hidden><section class="drawer" role="dialog" aria-modal="true"><button id="panelClose" class="panelClose" aria-label="Fermer">×</button>
-<div id="cartPanel" hidden><div class="kicker">Votre sélection</div><h2>Mon panier</h2><div id="cartItems"></div><div class="cartGrand"><span>Total</span><b id="cartTotal">0 TND</b></div>
-<form id="checkoutForm" class="checkoutForm"><h3>Je passe ma commande</h3><label>Nom complet<input name="name" type="text" autocomplete="name" required></label><label>Téléphone<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+216" required></label><label>Adresse de livraison<input name="address" type="text" autocomplete="street-address" required></label><label>Ville / gouvernorat<input name="city" type="text" autocomplete="address-level1" required></label><button class="submitOrder" type="submit" disabled>Confirmer ma commande</button><p id="localNotice" class="localNotice">Les commandes en ligne seront disponibles prochainement.</p><div id="orderNotice"></div></form></div>
-<div id="adminPanel" hidden><div class="kicker">Espace de gestion</div><h2>Stock & commandes</h2><p id="localAdminWarning" class="adminWarning"><b>Mode local :</b> données visibles seulement dans ce navigateur. Configurez le backend central pour synchroniser commandes et stock.</p><form id="adminLogin" class="checkoutForm" hidden><label>Email administrateur<input type="email" name="email" autocomplete="username" required></label><label>Mot de passe<input type="password" name="password" autocomplete="current-password" required></label><button class="submitOrder">Connexion admin</button></form><div id="adminContent" hidden><h3>Produits & disponibilité</h3><div id="adminProducts" class="adminProducts"></div><button id="saveInventory" class="submitOrder" type="button">Enregistrer le stock</button><h3>Commandes</h3><button id="exportOrders" class="exportOrders" type="button">Exporter les commandes CSV</button><button id="adminLogout" class="exportOrders" type="button">Déconnexion</button><div id="adminOrders" class="adminOrders"></div></div></div>
-</section></div></main>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./supabase-config.js"></script><script>const products=[
-{cat:"lens",name:"Lentilles Wonderlook",variant:"Couleur · 12 teintes",price:"120",unit:"TND",meta:"Boîte de 5 paires · port 1 mois · sans correction",source:"Tunis Lenses",url:"https://tunislenses.com/wonderlook/",img:"https://tunislenses.com/wp-content/uploads/2026/10/wl-box-duo.webp",alt:"Boîte de lentilles colorées Wonderlook"},
-{cat:"lens",name:"3D Colors",variant:"Couleur · 12 teintes",price:"90",old:"150",unit:"TND",meta:"La paire · port jusqu’à 6 mois · sans correction",source:"Tunis Lenses",url:"https://tunislenses.com/3d-colors/",img:"https://tunislenses.com/wp-content/uploads/2026/10/3d-pack-family.jpg",alt:"Boîtes de lentilles colorées 3D Colors"},
-{cat:"lens",name:"Soft Vision Color",variant:"Couleur · vert F-Green",price:"70–80",unit:"TND",meta:"Boîte de 2 lentilles · durée annoncée trimestrielle · options correctrices selon disponibilité",source:"AZZABI Optic",url:"https://azzabioptic.com/produit/lentilles-vertes-soft-vision-f-green/",img:"https://azzabioptic.com/wp-content/uploads/2025/09/9-2-299x299.jpg.webp",alt:"Lentille de couleur Soft Vision Color"},
-{cat:"lens",name:"Lentilles Bella Elite",variant:"Couleur · plusieurs teintes",price:"140–150",unit:"TND",meta:"Lentilles colorées · prix selon la teinte et la variante",source:"AZZABI Optic",url:"https://azzabioptic.com/lentilles-de-contact/lentilles-de-couleur/lentilles-de-couleur-bella/",img:"https://ecom-cdn.magrabi.com/prod/files/123943008/cl_product_image/en_US/magrabi_ecommerce/1239430_0.jpg",alt:"Lentille de couleur Bella Elite, teinte gris beige"},
-{cat:"lens",name:"Adore Tri Grey",variant:"Couleur · gris tri-ton",price:"100–120",unit:"TND",meta:"Paire de lentilles colorées · port trimestriel",source:"AZZABI Optic",url:"https://azzabioptic.com/produit/adore-tri-grey-tunisie/",img:"https://blink.bg/image/cache/catalog/incoming/image/data/Cvetni/adore-tritone-color-lenses-copy-1200x1200.webp",alt:"Boîte de lentilles de couleur Adore Tri-Tone"},
-{cat:"lens",name:"Aqua Blue",variant:"Couleur · bleu",price:"60",unit:"TND",meta:"Lentilles colorées · teinte Aqua Blue",source:"AZZABI Optic",url:"https://azzabioptic.com/categorie-produit/lentilles-de-contact/",img:"https://azzabioptic.com/wp-content/uploads/2025/09/9-2-299x299.jpg.webp",alt:"Lentilles de couleur Aqua Blue"},
-{cat:"lens",name:"Biofinity",variant:"Lentilles de vue · mensuelles",price:"80",unit:"TND",meta:"Boîte de 3 · correction à choisir",source:"AZZABI Optic",url:"https://azzabioptic.com/produit/lentilles-de-contact-biofinity-coopervision/",img:"https://azzabioptic.com/wp-content/uploads/2025/09/1-5-1-800x800.jpg",alt:"Boîte de lentilles mensuelles Biofinity CooperVision"},
-{cat:"lens",name:"Clariti 1 Day",variant:"Lentilles de vue · journalières",price:"160",unit:"TND",meta:"Lentilles journalières · correction à choisir",source:"AZZABI Optic",url:"https://azzabioptic.com/produit/lentilles-clariti-1-day-coopervision/",img:"https://images.tcdn.com.br/img/img_prod/1294871/lente_de_contato_clariti_1_day_miopia_2_20250827082805_0b1f532a7de3.png",alt:"Boîte de lentilles journalières Clariti 1 Day CooperVision"},
-{cat:"solutions",name:"Eye Care Pharma Souples",variant:"Solution multifonctions · 360 ml",price:"30",unit:"TND",meta:"Solution d’entretien pour lentilles souples",source:"B Pharma",url:"https://www.bpharma.tn/produit/eye-care-pharma-souples-solution-pour-lentilles-360ml/",img:"https://www.parashop.tn/image/cache/catalog/produits/eye-care/eye-care-pharma-souples-solution-lentilles-550x550.jpg",alt:"Flacon et boîte Eye Care Pharma Souples 360 ml"},
-{cat:"solutions",name:"Eye Care Pharma Souples",variant:"Solution multifonctions · 360 ml",price:"34,900",unit:"TND",meta:"Même référence · prix relevé chez un second vendeur",source:"Phytonat",url:"https://phytonat.tn/produit/eye-care-pharma-souple-solution-lentilles-360ml/",img:"https://www.parashop.tn/image/cache/catalog/produits/eye-care/eye-care-pharma-souples-solution-lentilles-550x550.jpg",alt:"Flacon et boîte Eye Care Pharma Souples 360 ml"},
-{cat:"solutions",name:"Eye Care Pharma Souples",variant:"Solution multifonctions · 360 ml",price:"35",unit:"TND",meta:"Même référence · prix relevé chez un troisième vendeur",source:"Parapharmacie Plus",url:"https://www.parapharmacieplus.tn/",img:"https://www.parashop.tn/image/cache/catalog/produits/eye-care/eye-care-pharma-souples-solution-lentilles-550x550.jpg",alt:"Flacon et boîte Eye Care Pharma Souples 360 ml"},
-{cat:"solutions",name:"C Lens Plus",variant:"Solution multifonctions · 180 ml",price:"17,390",unit:"TND",meta:"Solution d’entretien pour lentilles de contact",source:"MaPara",url:"https://www.maparatunisie.tn/produit/c-lens-plus-180ml/",img:"https://paraland.tn/9425-thickbox_default/c-lens-plus-solution-lentilles-180ml.jpg",alt:"Flacon C Lens Plus 180 ml"},
-{cat:"solutions",name:"C Lens Plus",variant:"Solution multifonctions · 180 ml",price:"17,395",unit:"TND",meta:"Même référence · prix relevé chez un second vendeur",source:"Pharmashop",url:"https://pharmashop.tn/produit/2018-c-lens-plus-180-ml",img:"https://paraland.tn/9425-thickbox_default/c-lens-plus-solution-lentilles-180ml.jpg",alt:"Flacon C Lens Plus 180 ml"},
-{cat:"drops",name:"Uniflow Eye Care",variant:"Gouttes hydratantes · 10 ml",price:"26",unit:"TND",meta:"Gouttes oculaires d’hydratation · consulter la notice",source:"M Medical Store",url:"https://m-medicalstore.tn/4527-eye-care-uniflow-10-ml.html",img:"https://mypharma.tn/891-large_default/eye-care-uniflow-gouttes-oculaires-d-hydratation-10ml.jpg",alt:"Flacon de gouttes hydratantes Uniflow Eye Care 10 ml"},
-{cat:"drops",name:"Uniflow Eye Care",variant:"Gouttes hydratantes · 10 ml",price:"27,517",unit:"TND",meta:"Même référence · prix relevé chez un second vendeur",source:"Pharmashop",url:"https://pharmashop.tn/produit/1534-eye-care-uniflow-gouttes-oculaires-dhydratation-10-ml",img:"https://mypharma.tn/891-large_default/eye-care-uniflow-gouttes-oculaires-d-hydratation-10ml.jpg",alt:"Flacon de gouttes hydratantes Uniflow Eye Care 10 ml"},
-{cat:"drops",name:"Innoxa Hydralose",variant:"Gouttes hydratantes · 10 ml",price:"35,100",unit:"TND",meta:"Gouttes hydratantes · flacon 10 ml",source:"Phytonat",url:"https://phytonat.tn/produit/innoxa-hydralose-gouttes-oculaires-hydratantes-10-ml/",img:"https://www.illicopharma.com/113517-thickbox_default/innoxa-hydralose-gouttes-oculaires-hydratantes-10ml.jpg",alt:"Flacon de gouttes oculaires Innoxa Hydralose 10 ml"},
-{cat:"drops",name:"Visionlux Plus",variant:"Gouttes oculaires · 10 ml",price:"46,635",unit:"TND",meta:"Gouttes oculaires · flacon 10 ml",source:"1001para",url:"https://1001para.tn/accueil/12701-visionlux-plus-gouttes-oculaire-10-ml-6191450601153.html",img:"https://1001para.tn/25522-large_default/visionlux-plus-gouttes-oculaire-10-ml.jpg",alt:"Flacon de gouttes oculaires Visionlux Plus 10 ml"}
-];
-const storeKey="formaStoreV1", orderKey="formaOrdersV1", cartKey="formaCartV1";
-const slug=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-const catalogMap=new Map();
-for(const p of products){
- const id=p.cat+"-"+slug(p.name), n=parseFloat(String(p.price).replace(",",".").split(/[–-]/)[0])||0;
- if(!catalogMap.has(id))catalogMap.set(id,{...p,id,defaultPrice:n,marketPrices:[n]});
- else catalogMap.get(id).marketPrices.push(n);
-}
-const catalog=[...catalogMap.values()], read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
-let inventory=read(storeKey,{}),orders=read(orderKey,[]),cart=read(cartKey,{}),db=null,backendReady=false,backendError="",adminSession=false;
-catalog.forEach(p=>{if(!inventory[p.id])inventory[p.id]={available:false,stock:0,price:p.defaultPrice};});
-const cfg=window.FORMA_SUPABASE_CONFIG||{};
-const writeLocal=()=>{localStorage.setItem(storeKey,JSON.stringify(inventory));localStorage.setItem(orderKey,JSON.stringify(orders));localStorage.setItem(cartKey,JSON.stringify(cart));};
-const money=n=>Number(n||0).toLocaleString("fr-TN",{minimumFractionDigits:3,maximumFractionDigits:3})+" TND";
-async function loadInventory(){
- const {data,error}=await db.from("inventory").select("product_id,available,stock,sale_price");
- if(error)throw error;
- const next={};catalog.forEach(p=>next[p.id]={available:false,stock:0,price:0});
- data.forEach(row=>{if(next[row.product_id])next[row.product_id]={available:row.available,stock:row.stock,price:Number(row.sale_price)};});
- inventory=next;render();cartLines();
-}
-async function initBackend(){
- if(!cfg.url||!cfg.anonKey)return;
- if(!window.supabase?.createClient){backendError="Le client Supabase ne s’est pas chargé. Vérifiez la connexion réseau.";setOrderNotice(backendError);return;}
- db=window.supabase.createClient(cfg.url,cfg.anonKey);
- try{await loadInventory();backendReady=true;render();document.querySelector("#checkoutForm .submitOrder").disabled=false;document.querySelector("#adminOpen").hidden=!new URLSearchParams(location.search).has("admin");document.querySelector("#localAdminWarning").hidden=true;document.querySelector("#localNotice").textContent="Votre commande sera transmise de façon sécurisée à la boutique.";}
- catch(e){backendError="Backend non initialisé : appliquez supabase/schema.sql puis vérifiez l’URL et la clé publique.";setOrderNotice(backendError);render();}
-}
-function setOrderNotice(text){const el=document.querySelector("#orderNotice");if(el)el.innerHTML='<div class="localNotice">'+text+'</div>';}
-function render(filter="all"){
- const shown=filter==="all"?catalog:catalog.filter(p=>p.cat===filter);
- document.querySelector("#grid").innerHTML=shown.map(p=>{
-  const st=inventory[p.id]||{available:false,stock:0,price:0},range=[Math.min(...p.marketPrices),Math.max(...p.marketPrices)];
-  const market=range[0]===range[1]?money(range[0]):"Dès "+money(range[0]),canBuy=backendReady&&!backendError&&st.available&&st.stock>0&&st.price>0;
-  return '<article class="card"><div class="visual '+(p.cat==="lens"?"color":p.cat==="solutions"?"solution":"drops")+'"><span class="pill">'+p.variant+'</span><img class="productPhoto" src="'+p.img+'" alt="'+p.alt+'" loading="lazy"></div><div class="details"><div class="type">'+(p.cat==="lens"?"Lentilles":p.cat==="solutions"?"Solutions":"Gouttes")+'</div><h2 class="name">'+p.name+'</h2><div class="meta">'+p.meta+'</div><div class="priceRow"><div class="price">'+(backendReady&&st.price>0?money(st.price):market)+'</div><span class="source">'+(canBuy?st.stock+" en stock":backendReady?"Indisponible":"Prix indicatif · indisponible")+'</span></div><button class="buy addCart" data-id="'+p.id+'" '+(canBuy?"":"disabled")+'>'+(canBuy?"Ajouter au panier":"Indisponible")+'</button></div></article>';
- }).join("");
- document.querySelectorAll(".addCart").forEach(b=>b.addEventListener("click",()=>addToCart(b.dataset.id)));
-}
-function cartLines(){
- const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,q])=>({p:catalog.find(x=>x.id===id),q})).filter(x=>x.p);
- const total=items.reduce((s,x)=>s+(Number(inventory[x.p.id]?.price)||0)*x.q,0);
- document.querySelector("#cartItems").innerHTML=items.length?items.map(({p,q})=>'<div class="cartLine"><img src="'+p.img+'" alt=""><div><strong>'+p.name+'</strong><small>'+money(inventory[p.id]?.price)+' / unité</small><div class="qty"><button type="button" data-minus="'+p.id+'">−</button><span>'+q+'</span><button type="button" data-plus="'+p.id+'">+</button></div></div><b>'+money((inventory[p.id]?.price||0)*q)+'</b></div>').join(""):'<p class="emptyCart">Votre panier est vide.</p>';
- document.querySelector("#cartTotal").textContent=money(total);document.querySelector("#cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);
- document.querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.minus,-1));document.querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.plus,1));
-}
-function addToCart(id){
- const st=inventory[id];if(!st?.available||st.stock<=0||st.price<=0)return;
- if((cart[id]||0)>=st.stock){alert("La quantité disponible est atteinte.");return;}
- cart[id]=(cart[id]||0)+1;writeLocal();cartLines();openPanel("cart");
-}
-function changeQty(id,delta){const next=(cart[id]||0)+delta,max=inventory[id]?.stock||0;if(next<=0)delete cart[id];else if(next<=max)cart[id]=next;else return;writeLocal();cartLines();}
-function openPanel(which){document.querySelector("#panels").hidden=false;document.querySelector("#cartPanel").hidden=which!=="cart";document.querySelector("#adminPanel").hidden=which!=="admin";document.body.classList.add("panelOpen");if(which==="cart")cartLines();else renderAdmin();}
-function closePanel(){document.querySelector("#panels").hidden=true;document.body.classList.remove("panelOpen");}
-function renderAdmin(){
- document.querySelector("#localAdminWarning").hidden=backendReady;document.querySelector("#adminLogin").hidden=!backendReady||adminSession;document.querySelector("#adminContent").hidden=backendReady&&!adminSession;
- if(backendError&&backendReady){document.querySelector("#adminLogin").hidden=true;document.querySelector("#adminContent").hidden=false;document.querySelector("#adminProducts").innerHTML='<p class="localNotice">'+backendError+'</p>';return;}
- if(backendReady&&!adminSession)return;
- document.querySelector("#adminProducts").innerHTML=catalog.map(p=>{const st=inventory[p.id]||{available:false,stock:0,price:0};return '<div class="adminProduct"><img src="'+p.img+'" alt=""><div class="adminName"><b>'+p.name+'</b><small>'+p.variant+'</small></div><label>Prix TND<input type="number" min="0" step="0.001" data-price="'+p.id+'" value="'+Number(st.price).toFixed(3)+'"></label><label>Stock<input type="number" min="0" step="1" data-stock="'+p.id+'" value="'+Number(st.stock)+'"></label><label class="availability"><input type="checkbox" data-available="'+p.id+'" '+(st.available?"checked":"")+'> Disponible</label></div>';}).join("");
- document.querySelector("#adminOrders").innerHTML=orders.length?orders.slice().reverse().map(o=>'<article class="orderCard"><div class="orderTop"><b>'+o.ref+'</b><span>'+new Date(o.created_at||o.createdAt).toLocaleString("fr-TN")+'</span><select data-status="'+(o.id||o.ref)+'">'+["À traiter","Confirmée","Expédiée","Terminée","Annulée"].map(s=>'<option '+((o.status||"À traiter")===s?"selected":"")+'>'+s+'</option>').join("")+'</select></div><p><b>'+(o.customer_name||o.customer?.name||"")+'</b> · '+(o.phone||o.customer?.phone||"")+'<br>'+(o.address||o.customer?.address||"")+' '+(o.city||o.customer?.city||"")+'</p><ul>'+((o.order_items||o.items||[]).map(i=>'<li>'+(i.product_name||i.name)+' × '+(i.quantity||i.qty)+' — '+money((i.unit_price||i.price)*(i.quantity||i.qty))+'</li>').join(""))+'</ul><strong>Total : '+money(o.total)+'</strong></article>').join(""):'<p class="emptyCart">Aucune commande enregistrée.</p>';
- document.querySelectorAll("[data-status]").forEach(s=>s.onchange=async()=>{if(backendReady){const {error}=await db.from("orders").update({status:s.value}).eq("id",s.dataset.status);if(error)alert("Statut non modifié : "+error.message);else await refreshOrders();}else{const o=orders.find(x=>x.ref===s.dataset.status);if(o){o.status=s.value;writeLocal();}}});
-}
-async function refreshOrders(){
- const {data,error}=await db.from("orders").select("id,ref,created_at,status,customer_name,phone,address,city,total,order_items(product_name,quantity,unit_price)").order("created_at",{ascending:false});
- if(error){alert("Impossible de charger les commandes : "+error.message);return;}orders=data||[];renderAdmin();
-}
-document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render(b.dataset.filter)}));
-document.querySelectorAll("[data-jump]").forEach(a=>a.addEventListener("click",()=>{const key=a.dataset.jump;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===key));render(key)}));
-document.querySelector("#cartOpen").onclick=()=>openPanel("cart");document.querySelector("#adminOpen").onclick=()=>openPanel("admin");document.querySelector("#panelClose").onclick=closePanel;
-document.querySelector("#panels").addEventListener("click",e=>{if(e.target.id==="panels")closePanel();});document.addEventListener("keydown",e=>{if(e.key==="Escape")closePanel();});
-document.querySelector("#adminLogin").addEventListener("submit",async e=>{
- e.preventDefault();if(!backendReady)return;const fd=new FormData(e.currentTarget),{data,error}=await db.auth.signInWithPassword({email:fd.get("email"),password:fd.get("password")});
- if(error){alert("Connexion refusée : "+error.message);return;}
- const check=await db.from("admin_users").select("user_id").eq("user_id",data.user.id).maybeSingle();
- if(check.error||!check.data){await db.auth.signOut();alert("Ce compte n’a pas les droits administrateur.");return;}
- adminSession=true;e.currentTarget.reset();const inv=await db.from("inventory").select("product_id,available,stock,sale_price");
- if(!inv.error){catalog.forEach(p=>inventory[p.id]={available:false,stock:0,price:0});inv.data.forEach(r=>{if(inventory[r.product_id])inventory[r.product_id]={available:r.available,stock:r.stock,price:Number(r.sale_price)};});}
- await refreshOrders();render();renderAdmin();
-});
-document.querySelector("#adminLogout").onclick=async()=>{if(db)await db.auth.signOut();adminSession=false;renderAdmin();};
-document.querySelector("#saveInventory").onclick=async()=>{
- document.querySelectorAll("[data-price]").forEach(x=>inventory[x.dataset.price].price=Math.max(0,Number(x.value)||0));
- document.querySelectorAll("[data-stock]").forEach(x=>inventory[x.dataset.stock].stock=Math.max(0,Math.floor(Number(x.value)||0)));
- document.querySelectorAll("[data-available]").forEach(x=>inventory[x.dataset.available].available=x.checked);
- if(backendReady){
-  const rows=catalog.map(p=>({product_id:p.id,name:p.name,category:p.cat,description:p.meta,image_url:p.img,market_price_min:Math.min(...p.marketPrices),market_price_max:Math.max(...p.marketPrices),sale_price:inventory[p.id].price,stock:inventory[p.id].stock,available:inventory[p.id].available&&inventory[p.id].stock>0}));
-  const {error}=await db.from("inventory").upsert(rows,{onConflict:"product_id"});
-  if(error){alert("Stock non enregistré : "+error.message);return;}
-  inventory=catalog.reduce((a,p)=>(a[p.id]={...inventory[p.id],available:inventory[p.id].available&&inventory[p.id].stock>0},a),{});await loadInventory();renderAdmin();alert("Stock synchronisé.");
- }else{writeLocal();render();cartLines();renderAdmin();alert("Stock enregistré dans ce navigateur uniquement.");}
-};
-document.querySelector("#exportOrders").onclick=()=>{
- const rows=[["Commande","Date","Statut","Nom","Téléphone","Adresse","Ville","Articles","Total"],...orders.map(o=>[o.ref,o.created_at||o.createdAt,o.status,o.customer_name||o.customer?.name,o.phone||o.customer?.phone,o.address||o.customer?.address,o.city||o.customer?.city,(o.order_items||o.items||[]).map(i=>(i.product_name||i.name)+" x "+(i.quantity||i.qty)).join(" | "),o.total])];
- const csv=rows.map(r=>r.map(v=>'"'+String(v??"").replaceAll('"','""')+'"').join(";")).join("\r\n"),a=document.createElement("a");
- a.href=URL.createObjectURL(new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="jihen-abbes-commandes.csv";a.click();URL.revokeObjectURL(a.href);
-};
-document.querySelector("#checkoutForm").addEventListener("submit",async e=>{
- e.preventDefault();const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,quantity])=>({p:catalog.find(x=>x.id===id),quantity})).filter(x=>x.p);
- if(!items.length){alert("Votre panier est vide.");return;}
- if(items.some(x=>!inventory[x.p.id]?.available||inventory[x.p.id].stock<x.quantity)){alert("Le stock a changé. Vérifiez votre panier.");return;}
- const fd=new FormData(e.currentTarget);
- if(!backendReady){setOrderNotice("Les commandes en ligne seront disponibles prochainement.");return;}
- if(backendReady){
-  if(backendError){setOrderNotice(backendError);return;}
-  const {data,error}=await db.rpc("place_order",{p_customer_name:fd.get("name"),p_phone:fd.get("phone"),p_address:fd.get("address"),p_city:fd.get("city"),p_items:items.map(x=>({product_id:x.p.id,quantity:x.quantity}))});
-  if(error){setOrderNotice("Commande non transmise : "+error.message);return;}
-  const notice=document.querySelector("#orderNotice");notice.innerHTML='<div class="noticeSuccess"><b>Commande '+data.ref+' confirmée.</b><br>Votre commande a bien été transmise.</div>';
-  cart={};writeLocal();await loadInventory();e.currentTarget.reset();cartLines();return;
- }
- setOrderNotice("Les commandes en ligne seront disponibles prochainement.");
-});
-render();cartLines();initBackend();
+  <div class="announce">La livraison offerte dès <b>25 TND</b> · Vos essentiels, sans détour</div>
+  <header>
+    <div class="wrap nav">
+      <button class="iconbtn menu-toggle" aria-label="Ouvrir le menu" id="menuButton">☰</button>
+      <a href="#selection" class="brand" aria-label="iris par Jihen Abbes"><span class="brand-mark"></span><span class="brand-word">iris<small>by Jihen Abbes</small></span></a>
+      <nav class="navlinks"><a href="#selection">Catalogue</a><a href="#selection">Notre sélection</a><a href="#guide">Comment ça marche</a><a href="#aide">Besoin d’aide&nbsp;?</a></nav>
+      <div class="navright"><button class="iconbtn" id="searchButton" aria-label="Rechercher">⌕</button><button class="iconbtn" id="cartButton" aria-label="Ouvrir le panier">♧<span class="cart-count" id="cartCount">0</span></button></div>
+    </div>
+    <div class="search-box" id="searchBox"><input id="searchInput" type="search" placeholder="Rechercher une lentille…" aria-label="Rechercher un produit"><button class="iconbtn" id="searchClose" aria-label="Fermer">×</button></div>
+  </header>
+  <main>
+    <section class="wrap hero" id="accueil">
+      <div class="hero-panel">
+        <div class="hero-copy"><span class="eyebrow">La simplicité vous va si bien</span><h1>La vue claire,<br>la vie <em>simple.</em></h1><p>Vos lentilles préférées, choisies avec soin et livrées jusqu’à votre porte. Moins de démarches, plus de liberté.</p><div class="actions"><a href="#selection" class="btn">Trouver mes lentilles <span>↗</span></a><a href="#guide" class="btn btn-light">Comment ça marche&nbsp;?</a></div><div class="proof"><span class="stars">★★★★★</span><span>Des yeux heureux, des clients aussi.</span></div></div>
+        <div class="hero-art" aria-label="Portrait d’une cliente souriante"><div class="sun-disc"></div><div class="hero-photo"></div><div class="lens-float"></div><div class="float-tag">Votre confort, d’abord<strong>Simplement iris.</strong></div></div>
+      </div>
+      <div class="trustbar"><div class="trust-item"><span class="trust-icon">↗</span>Livraison suivie</div><div class="trust-item"><span class="trust-icon">♡</span>Marques sélectionnées</div><div class="trust-item"><span class="trust-icon">⌕</span>Aide quand il faut</div><div class="trust-item"><span class="trust-icon">✓</span>Paiement sécurisé</div></div>
+    </section>
+    <section class="wrap section" id="lentilles"><div class="section-head"><div><div class="kicker">On commence par quoi&nbsp;?</div><h2>Vos lentilles, votre rythme.</h2></div><a class="text-link" href="#selection">Tout voir&nbsp; ↗</a></div>
+      <div class="category-row">
+        <a class="category" href="#selection" data-category="Journalières"><div class="category-art cat-1"><svg viewBox="0 0 100 100" fill="none"><path d="M13 50C25 26 38 19 51 19s27 7 38 31C78 73 64 81 51 81S25 73 13 50Z" fill="#fff" fill-opacity=".62" stroke="#fff" stroke-width="2"/><circle cx="51" cy="50" r="20" fill="#fff" fill-opacity=".7"/><circle cx="51" cy="50" r="8" fill="#83b873"/></svg></div><h3>Journalières</h3><p>Fraîches, chaque matin</p></a>
+        <a class="category" href="#selection" data-category="Mensuelles"><div class="category-art cat-2"><svg viewBox="0 0 100 100" fill="none"><path d="M13 50C25 26 38 19 51 19s27 7 38 31C78 73 64 81 51 81S25 73 13 50Z" fill="#fff" fill-opacity=".68" stroke="#fff" stroke-width="2"/><circle cx="51" cy="50" r="20" fill="#fff" fill-opacity=".75"/><circle cx="51" cy="50" r="8" fill="#d27e66"/></svg></div><h3>Mensuelles</h3><p>Votre confort, au quotidien</p></a>
+        <a class="category" href="#selection" data-category="Astigmatisme"><div class="category-art cat-3"><svg viewBox="0 0 100 100" fill="none"><path d="M13 50C25 26 38 19 51 19s27 7 38 31C78 73 64 81 51 81S25 73 13 50Z" fill="#fff" fill-opacity=".65" stroke="#fff" stroke-width="2"/><circle cx="51" cy="50" r="20" fill="#fff" fill-opacity=".74"/><circle cx="51" cy="50" r="8" fill="#8579c0"/></svg></div><h3>Astigmatisme</h3><p>Une vision bien nette</p></a>
+        <a class="category" href="#selection" data-category="Multifocales"><div class="category-art cat-4"><svg viewBox="0 0 100 100" fill="none"><path d="M13 50C25 26 38 19 51 19s27 7 38 31C78 73 64 81 51 81S25 73 13 50Z" fill="#fff" fill-opacity=".67" stroke="#fff" stroke-width="2"/><circle cx="51" cy="50" r="20" fill="#fff" fill-opacity=".73"/><circle cx="51" cy="50" r="8" fill="#bea04b"/></svg></div><h3>Multifocales</h3><p>À l’aise, de près comme de loin</p></a>
+      </div>
+    </section>
+    <section class="bestsellers" id="selection"><div class="wrap"><div class="section-head"><div><div class="kicker">La sélection iris</div><h2>Les petits favoris.</h2></div><a href="#lentilles" class="text-link">Voir tout le catalogue&nbsp; ↗</a></div>
+      <div class="catalog-toolbar"><div class="filters" role="group" aria-label="Filtrer les lentilles"><button class="filter active" data-filter="Tout">Tout voir</button><button class="filter" data-filter="Journalières">Journalières</button><button class="filter" data-filter="Mensuelles">Mensuelles</button><button class="filter" data-filter="Astigmatisme">Astigmatisme</button><button class="filter" data-filter="Multifocales">Multifocales</button><button class="filter" data-filter="Eye-lashes">Eye-lashes</button><button class="filter" data-filter="Accessoires">Accessoires</button></div><label class="sort-control" for="productSort"><span>Trier par</span><select id="productSort" aria-label="Trier les produits"><option value="relevance">Pertinence</option><option value="price-asc">Prix croissant</option><option value="price-desc">Prix décroissant</option></select></label><button type="button" class="advanced-filter-toggle" id="advancedFiltersToggle" aria-expanded="false" aria-controls="advancedFilterPanel"><span aria-hidden="true">☷</span> Filtres <span class="filter-count" id="advancedFilterCount" hidden>0</span></button><div class="advanced-filter-panel" id="advancedFilterPanel" hidden><div class="advanced-filter-head"><strong>Affiner la sélection</strong><button type="button" class="advanced-filter-reset" id="advancedFiltersReset">Tout effacer</button></div><div class="advanced-filter-groups" id="advancedFilterGroups"></div></div></div>
+      <div class="catalog-empty" id="catalogEmpty" hidden><span class="new-category-kicker" id="catalogEmptyKicker"></span><strong id="catalogEmptyTitle"></strong><p id="catalogEmptyText"></p></div>
+      <div class="products" id="productGrid">
+        <article class="product" data-type="Journalières" data-brand="iris essentials" data-manufacturer="iris" data-periodicity="1 jour" data-lens-type="Quotidienne" data-availability="available" data-name="Clair matin 1 jour" data-price="8.5" data-relevance="0"><div class="product-art pa1"><span class="badge">COUP DE CŒUR</span><button class="quick-add" aria-label="Ajouter Clair Matin au panier" data-add="Clair Matin 1 jour" data-price="8.5">+</button></div><div class="product-info"><div class="brand-small">iris essentials</div><h3 class="product-title">Clair Matin · 1 jour</h3><div class="rating"><span>★★★★★</span> &nbsp;4,9 · 86 avis</div><div class="product-bottom"><div class="price">8,500 <span class="per">TND</span></div><span class="per">/ boîte</span></div></div></article>
+        <article class="product" data-type="Mensuelles" data-brand="iris essentials" data-manufacturer="iris" data-periodicity="30 jours" data-lens-type="Quotidienne" data-availability="available" data-name="Douce nuit mensuelle" data-price="12" data-relevance="1"><div class="product-art pa2"><span class="badge">CONFORT +</span><button class="quick-add" aria-label="Ajouter Douce Nuit au panier" data-add="Douce Nuit · mensuelle" data-price="12">+</button></div><div class="product-info"><div class="brand-small">iris essentials</div><h3 class="product-title">Douce Nuit · mensuelle</h3><div class="rating"><span>★★★★★</span> &nbsp;4,8 · 54 avis</div><div class="product-bottom"><div class="price">12,000 <span class="per">TND</span></div><span class="per">/ boîte</span></div></div></article>
+        <article class="product" data-type="Astigmatisme" data-brand="iris select" data-manufacturer="iris" data-periodicity="30 jours" data-lens-type="Astigmatisme" data-availability="available" data-name="Équilibre torique" data-price="14.5" data-relevance="2"><div class="product-art pa3"><span class="badge">VISION NETTE</span><button class="quick-add" aria-label="Ajouter Équilibre Torique au panier" data-add="Équilibre · torique" data-price="14.5">+</button></div><div class="product-info"><div class="brand-small">iris select</div><h3 class="product-title">Équilibre · torique</h3><div class="rating"><span>★★★★★</span> &nbsp;4,9 · 38 avis</div><div class="product-bottom"><div class="price">14,500 <span class="per">TND</span></div><span class="per">/ boîte</span></div></div></article>
+        <article class="product" data-type="Multifocales" data-brand="iris select" data-manufacturer="iris" data-periodicity="30 jours" data-lens-type="Multifocale" data-availability="available" data-name="Horizon multifocale" data-price="16.5" data-relevance="3"><div class="product-art pa4"><span class="badge">TOUT EN DOUCEUR</span><button class="quick-add" aria-label="Ajouter Horizon au panier" data-add="Horizon · multifocale" data-price="16.5">+</button></div><div class="product-info"><div class="brand-small">iris select</div><h3 class="product-title">Horizon · multifocale</h3><div class="rating"><span>★★★★★</span> &nbsp;4,7 · 27 avis</div><div class="product-bottom"><div class="price">16,500 <span class="per">TND</span></div><span class="per">/ boîte</span></div></div></article>
+      </div>
+      <p style="font-size:10px;color:#777f78;margin:18px 0 0">Les lentilles correctrices nécessitent une ordonnance valide. Retrouvez les paramètres adaptés à votre correction avant tout achat.</p>
+    </div></section>
+<section class="wrap new-categories" aria-labelledby="newCategoriesTitle"><div class="section-head"><div><div class="kicker">De nouvelles envies</div><h2 id="newCategoriesTitle">Bientôt chez iris.</h2></div></div><div class="new-category-grid"><article class="new-category-card accessories"><span class="soon-pill">COMING SOON</span><span class="case-art" aria-hidden="true"></span><div class="new-category-kicker">Étui</div><h3>Vos lentilles bien protégées.</h3><p>Nos étuis pour lentilles arrivent bientôt.</p><button class="category-action" type="button" data-catalog-category="Étui">Découvrir la catégorie <span>↗</span></button></article></div></section>
+    <section class="wrap split" id="guide"><div class="split-panel"><div class="split-visual"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80" alt="Une cliente souriante" loading="lazy"><div class="circle-note">Simple<br>comme<br>bonjour</div></div><div class="split-copy"><div class="kicker">C’est tout simple</div><h2>Vos lentilles en<br>trois petits pas.</h2><p>On a imaginé chaque étape pour qu’elle soit claire, rapide et sans prise de tête.</p><div class="steps"><div class="step"><span class="step-no">1</span> Choisissez votre type de lentilles</div><div class="step"><span class="step-no">2</span> Indiquez les paramètres de votre ordonnance</div><div class="step"><span class="step-no">3</span> On prépare et on livre chez vous</div></div><a class="btn" href="#selection">Découvrir la sélection <span>↗</span></a></div></div></section>
+    <section class="wrap quote"><div class="quote-panel"><div class="stars">★★★★★</div><blockquote>« Je n’ai jamais trouvé mes lentilles aussi facilement. Tout est clair, rapide, et elles arrivent à ma porte. »</blockquote><cite>Aminata · cliente iris</cite></div></section>
+    <section class="wrap newsletter"><div class="newsletter-panel"><div><h2>Un peu de douceur dans votre boîte mail.</h2><p>Nos nouveautés, nos conseils et des surprises. Promis, juste l’essentiel.</p></div><form class="email-form" id="newsletterForm"><input type="email" placeholder="Votre adresse e-mail" required aria-label="Votre adresse e-mail"><button>S’inscrire ↗</button></form></div></section>
+  </main>
+  <footer id="aide"><div class="wrap"><div class="footer-top"><div><a href="#accueil" class="brand footer-brand"><span class="brand-mark"></span>iris</a><p class="footer-about">La vue claire, la vie simple. Des lentilles choisies avec soin et une équipe toujours là pour vous aider.</p></div><div class="footer-col"><h4>Découvrir</h4><a href="#lentilles">Lentilles journalières</a><a href="#lentilles">Lentilles mensuelles</a><a href="#lentilles">Astigmatisme</a><a href="#selection">Notre sélection</a></div><div class="footer-col"><h4>Besoin d’aide&nbsp;?</h4><a href="#guide">Comment commander</a><a href="#aide">Livraison & retours</a><a href="mailto:bonjour@iris.example">Nous contacter</a><a href="#aide">Questions fréquentes</a></div><div class="footer-col"><h4>La maison iris</h4><a href="#aide">Notre histoire</a><a href="#aide">Conseils pour vos yeux</a><a href="#aide">Confidentialité</a><a href="#aide">Conditions de vente</a></div></div><div class="footer-bottom"><span>© 2026 iris. Tout simplement.</span><span>Paiement sécurisé · Vos données restent privées</span></div></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="drawer-backdrop" id="drawerBackdrop"><aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Votre panier"><div class="drawer-head"><h3>Votre panier <span id="drawerCount"></span></h3><button class="close" id="cartClose" aria-label="Fermer">×</button></div><div class="cart-list" id="cartList"></div><div class="cart-foot"><div class="subtotal"><span>Sous-total</span><span id="subtotal">0 FCFA</span></div><button class="btn" style="width:100%" id="checkout">Continuer ma commande ↗</button><p style="font-size:10px;color:#7b837d;text-align:center;margin:12px 0 0">La livraison et les détails seront confirmés à l’étape suivante.</p></div></aside></div>
+  <script>
+    const cart=new Map(), products=[...document.querySelectorAll('.product')],toast=document.getElementById('toast');let toastTimer;
+    function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2300)}
+    function renderCart(){let count=0,total=0;cart.forEach(x=>{count+=x.qty;total+=x.qty*x.price});document.getElementById('cartCount').textContent=count;document.getElementById('drawerCount').textContent=count?`(${count})`:'';document.getElementById('subtotal').textContent=total.toLocaleString('fr-FR')+' FCFA';const list=document.getElementById('cartList');if(!count){list.innerHTML='<div class="cart-empty">Votre panier prend une petite pause.<br>Ajoutez-y vos lentilles préférées&nbsp;!</div>';return}list.innerHTML=[...cart.entries()].map(([name,x])=>`<div class="cart-line"><div>${name}<small>${x.price.toLocaleString('fr-FR')} FCFA · la boîte</small></div><div class="qty"><button data-qty="${name}" data-delta="-1" aria-label="Retirer une boîte">−</button>${x.qty}<button data-qty="${name}" data-delta="1" aria-label="Ajouter une boîte">+</button></div></div>`).join('')}
+    document.querySelectorAll('[data-add]').forEach(btn=>btn.addEventListener('click',()=>{const name=btn.dataset.add;const item=cart.get(name)||{qty:0,price:Number(btn.dataset.price)};item.qty++;cart.set(name,item);renderCart();notify(name+' ajouté au panier')}));
+    document.getElementById('cartList').addEventListener('click',e=>{const b=e.target.closest('[data-qty]');if(!b)return;const item=cart.get(b.dataset.qty);item.qty+=Number(b.dataset.delta);if(item.qty<=0)cart.delete(b.dataset.qty);renderCart()});
+    const backdrop=document.getElementById('drawerBackdrop');document.getElementById('cartButton').onclick=()=>backdrop.classList.add('open');document.getElementById('cartClose').onclick=()=>backdrop.classList.remove('open');backdrop.addEventListener('click',e=>{if(e.target===backdrop)backdrop.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape'){backdrop.classList.remove('open');document.getElementById('searchBox').classList.remove('open')}});
+    document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const type=btn.dataset.filter;products.forEach(card=>card.hidden=type!=='Tout'&&card.dataset.type!==type)}));
+    document.querySelectorAll('.category').forEach(a=>a.addEventListener('click',()=>{const target=a.dataset.category;document.querySelectorAll('.filter').forEach(b=>{b.classList.toggle('active',b.dataset.filter===target)});products.forEach(card=>card.hidden=card.dataset.type!==target)}));
+    const searchBox=document.getElementById('searchBox'),searchInput=document.getElementById('searchInput');document.getElementById('searchButton').onclick=()=>{searchBox.classList.toggle('open');if(searchBox.classList.contains('open'))searchInput.focus()};document.getElementById('searchClose').onclick=()=>searchBox.classList.remove('open');searchInput.addEventListener('input',()=>{const q=searchInput.value.trim().toLocaleLowerCase('fr');if(q){document.getElementById('selection').scrollIntoView({behavior:'smooth'});products.forEach(card=>card.hidden=!card.dataset.name.toLocaleLowerCase('fr').includes(q))}else{const active=document.querySelector('.filter.active')?.dataset.filter||'Tout';products.forEach(card=>card.hidden=active!=='Tout'&&card.dataset.type!==active)}});
+    const navLinks=document.querySelector('.navlinks');document.getElementById('menuButton').onclick=()=>navLinks.classList.toggle('open');navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));document.getElementById('checkout').onclick=()=>notify(cart.size?'La commande en ligne sera bientôt disponible.':'Votre panier est vide pour le moment.');document.getElementById('newsletterForm').addEventListener('submit',e=>{e.preventDefault();e.currentTarget.reset();notify('Merci, vous êtes dans la boucle ✨')});renderCart();
+  </script>
+  <script>
+    document.querySelector('#selection .section-head .kicker').textContent='iris by Jihen Abbes';
+    document.querySelector('#selection .section-head h2').textContent='Le catalogue.';
+  </script>
+  <script>
+    const currencyObserver=new MutationObserver(()=>{
+      document.querySelectorAll('#subtotal,.cart-line small').forEach(node=>{
+        if(node.textContent.includes('FCFA')) node.textContent=node.textContent.replaceAll('FCFA','TND');
+      });
+    });
+    currencyObserver.observe(document.getElementById('drawerBackdrop'),{subtree:true,childList:true,characterData:true});
+    document.querySelectorAll('#subtotal,.cart-line small').forEach(node=>{if(node.textContent.includes('FCFA')) node.textContent=node.textContent.replaceAll('FCFA','TND');});
+  </script>
+  <script>
+    (()=>{
+      try{
+        const saved=JSON.parse(localStorage.getItem('iris_admin_products_v1')||'null');
+        if(!Array.isArray(saved))return;
+        const grid=document.getElementById('productGrid');
+        const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+        const formatPrice=value=>Number(value).toLocaleString('fr-TN',{minimumFractionDigits:3,maximumFractionDigits:3});
+        const art=['pa1','pa2','pa3','pa4'];
+        grid.innerHTML=saved.filter(product=>product.visible!==false).map((product,index)=>`<article class="product" data-type="${escapeHtml(product.category)}" data-brand="${escapeHtml(product.brand||'')}" data-manufacturer="${escapeHtml(product.manufacturer||'')}" data-periodicity="${escapeHtml(product.periodicity||'')}" data-lens-type="${escapeHtml(product.lensType||'')}" data-availability="${Number(product.stock)>0?'available':'out'}" data-name="${escapeHtml(product.name)}" data-price="${Number(product.price)||0}" data-relevance="${index}"><div class="product-art ${art[index%4]} ${product.image?`has-photo`:``}">${product.image?`<img class="product-photo" src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy">`:``}<span class="badge">${product.stock>0?'EN STOCK':'RUPTURE'}</span><button class="quick-add" aria-label="Ajouter ${escapeHtml(product.name)} au panier" data-add="${escapeHtml(product.name)}" data-price="${Number(product.price)||0}" ${product.stock<=0?'disabled title="Produit indisponible"':''}>+</button></div><div class="product-info"><div class="brand-small">${escapeHtml(product.brand||'iris essentials')}</div><h3 class="product-title">${escapeHtml(product.name)}</h3><div class="rating"><span>★★★★★</span> &nbsp;Sélection iris</div><div class="product-bottom"><div class="price">${formatPrice(product.price)} <span class="per">TND</span></div><span class="per">/ boîte</span></div></div></article>`).join('');
+        const storedCategories=JSON.parse(localStorage.getItem('iris_admin_categories_v1')||'null'),filterCategories=Array.isArray(storedCategories)?storedCategories:[...new Set(saved.map(product=>product.category).filter(Boolean))];document.querySelector('.filters').innerHTML=['Tout',...filterCategories].map((category,index)=>`<button class="filter ${index===0?'active':''}" data-filter="${escapeHtml(index===0?'Tout':category)}">${escapeHtml(index===0?'Tout voir':category)}</button>`).join('');
+        const cards=[...grid.querySelectorAll('.product')];
+        grid.querySelectorAll('[data-add]').forEach(button=>button.addEventListener('click',()=>{const name=button.dataset.add,item=cart.get(name)||{qty:0,price:Number(button.dataset.price)};item.qty++;cart.set(name,item);renderCart();notify(name+' ajouté au panier')}));
+        document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>cards.forEach(card=>card.hidden=button.dataset.filter!=='Tout'&&card.dataset.type!==button.dataset.filter)));
+        document.getElementById('searchInput').addEventListener('input',event=>{const query=event.target.value.trim().toLocaleLowerCase('fr');cards.forEach(card=>card.hidden=!!query&&!card.dataset.name.toLocaleLowerCase('fr').includes(query))});
+      }catch{}
+    })();
+  </script>
+  <script>
+    const emptyState=document.getElementById('catalogEmpty');
+    function refreshCatalogEmpty(){const selected=document.querySelector('.filter.active')?.dataset.filter||'Tout',visible=[...document.querySelectorAll('#productGrid .product')].some(card=>!card.hidden);emptyState.hidden=visible;if(visible)return;if(selected==='Eye-lashes'){document.getElementById('catalogEmptyKicker').textContent='Eye-lashes';document.getElementById('catalogEmptyTitle').textContent='COMING SOON';document.getElementById('catalogEmptyText').textContent='Notre sélection de faux cils arrive bientôt.'}else if(selected==='Accessoires'){document.getElementById('catalogEmptyKicker').textContent='Accessoires';document.getElementById('catalogEmptyTitle').textContent='Bientôt disponibles';document.getElementById('catalogEmptyText').textContent='Étuis pour lentilles et accessoires du quotidien arrivent bientôt.'}else{document.getElementById('catalogEmptyKicker').textContent='Sélection iris';document.getElementById('catalogEmptyTitle').textContent='Aucun produit trouvé';document.getElementById('catalogEmptyText').textContent='Essayez une autre catégorie ou une autre recherche.'}}
+    document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>setTimeout(refreshCatalogEmpty,0)));
+    document.getElementById('searchInput').addEventListener('input',()=>setTimeout(refreshCatalogEmpty,0));
+    document.querySelectorAll('[data-catalog-category]').forEach(button=>button.addEventListener('click',()=>{const filter=[...document.querySelectorAll('.filter')].find(item=>item.dataset.filter===button.dataset.catalogCategory);if(filter){filter.click();document.getElementById('selection').scrollIntoView({behavior:'smooth'})}}));
+    refreshCatalogEmpty();
+  </script>
+<script>
+(()=>{
+  try {
+    const products=JSON.parse(localStorage.getItem('iris_admin_products_v1')||'null');
+    if(Array.isArray(products)) {
+      const legacyLashes=products.filter(product=>product.category==='Eye-lashes').map(product=>product.name||product.title).filter(Boolean);
+      localStorage.setItem('iris_admin_products_v1',JSON.stringify(products.map(product=>product.category==='Accessoires'?{...product,category:'Étui'}:product.category==='Eye-lashes'?{...product,visible:false}:product)));
+      legacyLashes.forEach(name=>document.querySelectorAll('article, li, [class*="product"]').forEach(card=>{if(card.textContent.includes(name))card.hidden=true;}));
+    }
+    const categories=JSON.parse(localStorage.getItem('iris_admin_categories_v1')||'null');
+    if(Array.isArray(categories)) localStorage.setItem('iris_admin_categories_v1',JSON.stringify([...new Set(categories.map(category=>category==='Accessoires'?'Étui':category).filter(category=>category!=='Eye-lashes'))]));
+  } catch(e) {}
+  document.querySelectorAll('[data-filter]').forEach(button=>{
+    if(button.dataset.filter==='Eye-lashes'){button.remove();return;}
+    if(button.dataset.filter==='Accessoires'){button.dataset.filter='Étui';button.textContent='Étui';}
+  });
+  document.querySelectorAll('[data-catalog-category="Accessoires"]').forEach(button=>button.dataset.catalogCategory='Étui');
+  document.querySelectorAll('[data-category="Eye-lashes"], [data-category="Eye lashes"]').forEach(card=>card.remove());
+  document.querySelectorAll('.filters button').forEach(button=>{if(button.textContent.trim()==='Accessoires')button.textContent='Étui';});
+  const empty=document.getElementById('catalogEmpty');
+  const showEtuiMessage=()=>{if(document.querySelector('.filters [data-filter="Étui"]')?.classList.contains('active')&&empty&&!document.querySelector('#catalogGrid article:not([hidden])'))empty.innerHTML='<strong>Étui — bientôt disponibles</strong><span>Nos étuis pour lentilles arrivent bientôt.</span>';};
+  document.querySelectorAll('[data-filter="Étui"]').forEach(button=>button.addEventListener('click',()=>setTimeout(showEtuiMessage,0)));
+  if(empty)new MutationObserver(showEtuiMessage).observe(empty,{childList:true,subtree:true,characterData:true});
+})();
 </script>
-</body>
+<script>
+/* Copie de démarrage pour la boutique, utile lorsque file:// isole le stockage de l'admin. */
+(()=>{
+  const marker='iris_store_lenscom_seed_v1';
+  if(localStorage.getItem(marker))return;
+  const rows=[
+    ['1-Day Acuvue Define','Journalières','J27','Acuvue','Johnson & Johnson','journalière','daily'],
+    ['1-Day Acuvue Moist','Journalières','J27','Acuvue','Johnson & Johnson','journalière','daily'],
+    ['1-Day Acuvue Moist for Astigmatism','Journalières','J29','Acuvue','Johnson & Johnson','journalière','astigmatism'],
+    ['1-Day Acuvue Moist Multifocal','Journalières','J27','Acuvue','Johnson & Johnson','journalière','multifocal'],
+    ['1-Day Acuvue TruEye','Journalières','J27','Acuvue','Johnson & Johnson','journalière','daily'],
+    ['Acuvue 2','Bimensuelles','J19','Acuvue','Johnson & Johnson','toutes les deux semaines','daily'],
+    ['Acuvue Oasys','Bimensuelles','J19','Acuvue','Johnson & Johnson','toutes les deux semaines','daily'],
+    ['Acuvue Oasys 1-Day for Astigmatism','Journalières','J29','Acuvue','Johnson & Johnson','journalière','astigmatism'],
+    ['Acuvue Oasys 1-Day with Hydraluxe','Journalières','J27','Acuvue','Johnson & Johnson','journalière','daily'],
+    ['Acuvue Oasys 2-week Multifocal','Bimensuelles','J19','Acuvue','Johnson & Johnson','toutes les deux semaines','multifocal'],
+    ['Acuvue Oasys for Astigmatism','Bimensuelles','J19','Acuvue','Johnson & Johnson','toutes les deux semaines','astigmatism'],
+    ['Acuvue Oasys Max 1-Day','Journalières','J27','Acuvue','Johnson & Johnson','journalière','daily'],
+    ['Acuvue Oasys MAX 1-Day for Astigmatism 30PK','Journalières','J29','Acuvue','Johnson & Johnson','journalière','astigmatism'],
+    ['Acuvue Oasys Max 1-Day Multifocal','Journalières','J27','Acuvue','Johnson & Johnson','journalière','multifocal'],
+    ['Acuvue Oasys MAX 1-Day Multifocal for Astigmatism 30PK','Journalières','J29','Acuvue','Johnson & Johnson','journalière','astigmatism'],
+    ['Acuvue Oasys with Transitions','Bimensuelles','J19','Acuvue','Johnson & Johnson','toutes les deux semaines','daily'],
+    ['Acuvue VITA','Mensuelles','J19','Acuvue','Johnson & Johnson','mensuelle','daily'],
+    ['Acuvue VITA for Astigmatism','Mensuelles','J19','Acuvue','Johnson & Johnson','mensuelle','astigmatism'],
+    ['Air Optix Aqua','Mensuelles','V21','Air Optix','Alcon','mensuelle','daily'],
+    ['Air Optix Aqua Multifocal','Mensuelles','V21','Air Optix','Alcon','mensuelle','multifocal'],
+    ['Air Optix Colors','Mensuelles','V27','Air Optix','Alcon','mensuelle','color'],
+    ['Air Optix for Astigmatism','Mensuelles','V21','Air Optix','Alcon','mensuelle','astigmatism'],
+    ['Air Optix Night & Day Aqua','Mensuelles','V34','Air Optix','Alcon','mensuelle','daily'],
+    ['Air Optix plus HydraGlyde','Mensuelles','V34','Air Optix','Alcon','mensuelle','daily'],
+    ['Air Optix plus HydraGlyde for Astigmatism','Mensuelles','V34','Air Optix','Alcon','mensuelle','astigmatism'],
+    ['Air Optix plus HydraGlyde Multifocal','Mensuelles','V34','Air Optix','Alcon','mensuelle','multifocal'],
+    ['Avaira Vitality','Mensuelles','C84','Avaira','CooperVision','mensuelle','daily'],
+    ['Avaira Vitality Toric','Mensuelles','C84','Avaira','CooperVision','mensuelle','astigmatism'],
+    ['Biofinity','Mensuelles','C84','Biofinity','CooperVision','mensuelle','daily'],
+    ['Biofinity Energys','Mensuelles','C84','Biofinity','CooperVision','mensuelle','daily'],
+    ['Biofinity Multifocal','Mensuelles','C86','Biofinity','CooperVision','mensuelle','multifocal'],
+    ['Biofinity Toric','Mensuelles','C84','Biofinity','CooperVision','mensuelle','astigmatism'],
+    ['Biofinity Toric Multifocal','Mensuelles','C86','Biofinity','CooperVision','mensuelle','astigmatism'],
+    ['Biofinity XR','Mensuelles','C84','Biofinity','CooperVision','mensuelle','daily'],
+    ['Biomedics 55 Evolution Asphere','Mensuelles','B25','Biomedics','CooperVision','mensuelle','daily'],
+    ['Biomedics 55 Premier Asphere','Mensuelles','B25','Biomedics','CooperVision','mensuelle','daily'],
+    ['Biomedics Toric','Mensuelles','B25','Biomedics','CooperVision','mensuelle','astigmatism'],
+    ['Biotrue ONEday','Journalières','B25','Biotrue','Bausch + Lomb','journalière','daily'],
+    ['Biotrue ONEday for Astigmatism','Journalières','B25','Biotrue','Bausch + Lomb','journalière','astigmatism'],
+    ['Biotrue ONEday for Presbyopia','Journalières','B25','Biotrue','Bausch + Lomb','journalière','multifocal'],
+    ['Clariti 1-Day','Journalières','C92','Clariti','CooperVision','journalière','daily'],
+    ['Clariti 1-Day Multifocal','Journalières','C92','Clariti','CooperVision','journalière','multifocal'],
+    ['Clariti 1-Day Toric','Journalières','C92','Clariti','CooperVision','journalière','astigmatism'],
+    ['Dailies AquaComfort Plus','Journalières','V22','DAILIES','Alcon','journalière','daily'],
+    ['Dailies AquaComfort Plus Multifocal','Journalières','V22','DAILIES','Alcon','journalière','multifocal'],
+    ['Dailies AquaComfort Plus Toric','Journalières','V22','DAILIES','Alcon','journalière','astigmatism'],
+    ['Dailies Total 1','Journalières','V26','DAILIES','Alcon','journalière','daily'],
+    ['Dailies Total 1 for Astigmatism','Journalières','V26','DAILIES','Alcon','journalière','astigmatism'],
+    ['Dailies Total 1 Multifocal','Journalières','V26','DAILIES','Alcon','journalière','multifocal'],
+    ['Focus Dailies','Journalières','B21','Focus','Alcon','journalière','daily'],
+    ['Focus Dailies Toric','Journalières','B21','Focus','Alcon','journalière','astigmatism'],
+    ['Focus Night & Day','Mensuelles','V34','Focus','Alcon','mensuelle','daily'],
+    ['FreshLook ColorBlends','Mensuelles','V27','FreshLook','Alcon','mensuelle','color'],
+    ['FreshLook One-Day','Journalières','V27','FreshLook','Alcon','journalière','color'],
+    ['INFUSE One-Day','Journalières','B25','INFUSE','Bausch + Lomb','journalière','daily'],
+    ['INFUSE One-Day for Astigmatism 90PK','Journalières','B25','INFUSE','Bausch + Lomb','journalière','astigmatism'],
+    ['INFUSE One-Day Multifocal 90PK','Journalières','B25','INFUSE','Bausch + Lomb','journalière','multifocal'],
+    ['MyDay Daily Disposable','Journalières','C95','MyDay','CooperVision','journalière','daily'],
+    ['MyDay Daily Disposable Multifocal','Journalières','C95','MyDay','CooperVision','journalière','multifocal'],
+    ['MyDay Daily Disposable Toric','Journalières','C95','MyDay','CooperVision','journalière','astigmatism']
+  ];
+  const key='iris_admin_products_v1',categoryKey='iris_admin_categories_v1';
+  let current=[];try{current=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(current))current=[];}catch(e){}
+  const known=new Set(current.map(p=>(p.name||'').trim().toLowerCase()));
+  const additions=rows.filter(row=>!known.has(row[0].trim().toLowerCase())).map((row,i)=>{
+    const [name,category,imageCode,brand,manufacturer,periodicity,lensType]=row;
+    const sku=String(i+1).padStart(3,'0');
+    return {id:`lenscom-${sku}`,sku:`IRIS-LC-${sku}`,name,brand,manufacturer,category,periodicity,lensType,price:Math.round((24+((i*17+11)%94))*100)/100,stock:50,image:'',imageSource:'',sourceUrl:'https://www.lens.com/contact-lenses/brands/',description:`Marque ${brand} · remplacement ${periodicity} · gamme ${lensType}. Prix de démonstration en TND.`,visible:true};
+  });
+  if(additions.length){localStorage.setItem(key,JSON.stringify([...current,...additions]));}
+  let categories=[];try{categories=JSON.parse(localStorage.getItem(categoryKey)||'[]');if(!Array.isArray(categories))categories=[];}catch(e){}
+  localStorage.setItem(categoryKey,JSON.stringify([...new Set([...categories,'Journalières','Bimensuelles','Mensuelles','Étui'])]));
+  localStorage.setItem(marker,'done');
+  if(additions.length)location.reload();
+})();
+</script>
+<script>
+/* Remplace les images Lens.com susceptibles de bloquer le chargement externe dans la boutique. */
+(()=>{
+  const marker='iris_store_product_photos_v2';
+  if(localStorage.getItem(marker))return;
+  const imageFor=product=>{
+    const name=(product.name||'').toLowerCase();
+    if(name.includes('acuvue'))return 'images/acuvue.jpg';
+    if(name.includes('air optix colors'))return 'images/air-optix-colors.png';
+    if(name.includes('air optix'))return 'images/air-optix.jpg';
+    if(name.includes('avaira'))return 'images/avaira.jpg';
+    if(name.includes('biomedics'))return 'images/biomedics.png';
+    if(name.includes('biofinity toric'))return 'images/biofinity-toric.jpg';
+    if(name.includes('biofinity'))return 'images/biofinity.jpg';
+    if(name.includes('biotrue'))return 'images/biotrue.jpg';
+    if(name.includes('clariti'))return 'images/clariti.png';
+    if(name.includes('dailies total 1'))return 'images/dailies-total-1.jpg';
+    if(name.includes('dailies aquacomfort'))return 'images/dailies-aquacomfort.jpg';
+    if(name.includes('focus night & day'))return 'images/focus-night-day.jpg';
+    if(name.includes('focus dailies'))return 'images/focus-dailies.jpg';
+    if(name.includes('freshlook'))return 'images/freshlook.jpg';
+    if(name.includes('infuse'))return 'images/infuse.png';
+    if(name.includes('myday'))return '';
+    return null;
+  };
+  let photosUpdated=false;
+  try{
+    const key='iris_admin_products_v1',items=JSON.parse(localStorage.getItem(key)||'[]');
+    if(Array.isArray(items)){
+      const updated=items.map(product=>{
+        const image=imageFor(product);if(image===null)return product;if(product.image===image&&product.imageSource===image)return product;photosUpdated=true;return {...product,image,imageSource:image};
+      });
+      if(photosUpdated)localStorage.setItem(key,JSON.stringify(updated));
+    }
+    localStorage.setItem(marker,'done');
+    if(photosUpdated)location.reload();
+  }catch(e){localStorage.setItem(marker,'done');}
+})();
+</script>
+<style>
+  .promo-showcase{margin:38px auto 52px;padding:clamp(22px,4vw,42px);border-radius:28px;background:#fff1e7;border:1px solid #f4c6a5;max-width:1240px}
+  .promo-showcase .promo-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}
+  .promo-showcase .promo-kicker{display:inline-flex;align-items:center;gap:8px;color:#b94d12;font-size:.75rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+  .promo-showcase .promo-kicker:before{content:"✦";font-size:1.1rem;color:#f1782b}
+  .promo-showcase h2{margin:8px 0 0;font-size:clamp(1.6rem,3vw,2.35rem);color:#202522}
+  .promo-showcase .promo-note{margin:0;color:#6e625a;font-size:.92rem}
+  .promo-products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .promo-product{position:relative;display:grid;grid-template-columns:108px 1fr;align-items:center;gap:16px;padding:16px;border-radius:20px;background:#fff;box-shadow:0 8px 28px #8e4d2612}
+  .promo-product img{width:108px;height:108px;object-fit:contain;background:#fbfaf7;border-radius:14px}
+  .promo-product .promo-badge{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:99px;background:#f1782b;color:white;font-size:.68rem;font-weight:800;letter-spacing:.05em}
+  .promo-product .promo-brand{color:#837970;font-size:.74rem}
+  .promo-product h3{margin:5px 0 8px;font-size:1rem;line-height:1.3;color:#202522}
+  .promo-product .promo-prices{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .promo-product .promo-price{font-size:1.06rem;font-weight:800;color:#b94d12}
+  .promo-product del{color:#92877f;font-size:.83rem}
+  .promo-product a{display:inline-block;margin-top:10px;color:#202522;font-size:.8rem;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:760px){.promo-products{grid-template-columns:1fr}.promo-product{grid-template-columns:92px 1fr}.promo-product img{width:92px;height:92px}.promo-showcase .promo-heading{align-items:start;flex-direction:column}}
+</style>
+<script>
+(()=>{
+  const marker='iris_period_labels_and_promos_v1';
+  const labels={'Journalières':'1 jour','Journalière':'1 jour','Bimensuelles':'15 jours','Bimensuelle':'15 jours','Mensuelles':'30 jours','Mensuelle':'30 jours','Accessoires':'Étui'};
+  const key='iris_admin_products_v1',categoryKey='iris_admin_categories_v1';
+  let items=[],needsReload=false;
+  try{items=JSON.parse(localStorage.getItem(key)||'[]');if(!Array.isArray(items))items=[];}catch(e){}
+  if(!localStorage.getItem(marker)){
+    items=items.map(product=>{const category=labels[product.category]||product.category,periodicity=labels[product.periodicity]||product.periodicity;if(category!==product.category||periodicity!==product.periodicity)needsReload=true;return {...product,category,periodicity};});
+    const promoNames=['1-Day Acuvue Moist','Biofinity','Dailies Total 1','Air Optix Colors','Biotrue ONEday','Clariti 1-Day'];
+    promoNames.forEach((name,index)=>{const product=items.find(item=>(item.name||'').toLowerCase()===name.toLowerCase());if(product&&!product.promo){product.promo=true;product.compareAtPrice=Math.ceil(Number(product.price||30)/.85);product.promoPercent=15;needsReload=true;}});
+    try{
+      localStorage.setItem(key,JSON.stringify(items));
+      let categories=JSON.parse(localStorage.getItem(categoryKey)||'[]');if(!Array.isArray(categories))categories=[];
+      localStorage.setItem(categoryKey,JSON.stringify([...new Set(categories.map(category=>labels[category]||category).concat(['1 jour','15 jours','30 jours','Étui']))]));
+      localStorage.setItem(marker,'done');
+    }catch(e){localStorage.setItem(marker,'done');}
+    if(needsReload)location.reload();
+  }
+  document.querySelectorAll('[data-filter]').forEach(button=>{const old=button.dataset.filter;if(labels[old]){button.dataset.filter=labels[old];button.textContent=labels[old];}});
+  const shown=[];const names=['1-Day Acuvue Moist','Biofinity','Dailies Total 1','Air Optix Colors','Biotrue ONEday','Clariti 1-Day'];
+  names.forEach(name=>{const product=items.find(item=>(item.name||'').toLowerCase()===name.toLowerCase()&&item.visible!==false);if(product)shown.push(product);});
+  const filter=document.querySelector('.filters');
+  if(filter&&shown.length&&!document.querySelector('.promo-showcase')){
+    const section=document.createElement('section');section.className='promo-showcase';section.setAttribute('aria-labelledby','promoTitle');
+    section.innerHTML='<div class="promo-heading"><div><div class="promo-kicker">Offres du moment</div><h2 id="promoTitle">La sélection promo</h2></div><p class="promo-note">Des essentiels iris à prix doux.</p></div><div class="promo-products"></div>';
+    section.querySelector('.promo-products').innerHTML=shown.map(product=>{const compare=Number(product.compareAtPrice)||Math.ceil(Number(product.price||0)/.85);const image=product.image||'';return `<article class="promo-product"><span class="promo-badge">−15 %</span><img src="${image}" alt="${product.name}" loading="lazy"><div><div class="promo-brand">${product.brand||product.manufacturer||'iris'}</div><h3>${product.name}</h3><div class="promo-prices"><span class="promo-price">${Number(product.price||0).toFixed(2)} TND</span><del>${compare.toFixed(2)} TND</del></div><a href="#lentilles">Voir au catalogue ↗</a></div></article>`;}).join('');
+    filter.closest('section')?.before(section);
+    if(!section.isConnected)filter.before(section);
+  }
+})();
+</script>
+
+<script>
+  (() => {
+    const grid=document.getElementById('productGrid'),sort=document.getElementById('productSort');
+    if(!grid||!sort)return;
+    [...grid.querySelectorAll('.product')].forEach((card,index)=>{if(card.dataset.relevance===undefined)card.dataset.relevance=String(index);});
+    sort.addEventListener('change',()=>{
+      const cards=[...grid.querySelectorAll('.product')],mode=sort.value;
+      cards.sort((a,b)=>{
+        if(mode==='price-asc')return Number(a.dataset.price)-Number(b.dataset.price);
+        if(mode==='price-desc')return Number(b.dataset.price)-Number(a.dataset.price);
+        return Number(a.dataset.relevance)-Number(b.dataset.relevance);
+      });
+      cards.forEach(card=>grid.appendChild(card));
+    });
+  })();
+</script>
+<script>
+(()=>{
+  const grid=document.getElementById('productGrid'),panel=document.getElementById('advancedFilterPanel'),toggle=document.getElementById('advancedFiltersToggle'),groups=document.getElementById('advancedFilterGroups'),count=document.getElementById('advancedFilterCount'),reset=document.getElementById('advancedFiltersReset');
+  if(!grid||!panel||!toggle||!groups)return;
+  const cards=()=>[...grid.querySelectorAll('.product')],collator=new Intl.Collator('fr',{sensitivity:'base',numeric:true});
+  const facets=[
+    {key:'type',label:'Catégorie',title:'Catégories',display:{'1 jour':'Journalières','15 jours':'Bimensuelles','30 jours':'Mensuelles','Étui':'Étui'}},
+    {key:'brand',label:'Marque'},
+    {key:'manufacturer',label:'Fabricant'},
+    {key:'periodicity',label:'Période'},
+    {key:'lensType',label:'Type de lentille',display:{daily:'Quotidienne',astigmatism:'Astigmatisme',multifocal:'Multifocale',color:'Couleur'}},
+    {key:'availability',label:'Disponibilité',display:{available:'En stock',out:'Rupture'}}
+  ];
+  const htmlEscape=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+  const labelFor=(facet,value)=>facet.display?.[value]||value;
+  const selected=new Map(facets.map(facet=>[facet.key,new Set()]));
+  function buildOptions(){
+    groups.innerHTML=facets.map(facet=>{
+      const values=[...new Set(cards().map(card=>card.dataset[facet.key]).filter(Boolean))].sort(collator.compare);
+      if(!values.length)return '';
+      return `<fieldset class="filter-group"><legend>${htmlEscape(facet.title||facet.label)}</legend><div class="filter-group-options">${values.map(value=>`<label class="filter-option"><input type="checkbox" data-facet="${facet.key}" value="${htmlEscape(value)}"><span>${htmlEscape(labelFor(facet,value))}</span></label>`).join('')}</div></fieldset>`;
+    }).join('');
+  }
+  function syncCount(){const total=[...selected.values()].reduce((sum,set)=>sum+set.size,0);count.textContent=String(total);count.hidden=!total;}
+  function syncCategoryChips(){
+    const chosen=selected.get('type'),chips=[...document.querySelectorAll('.filters [data-filter]')];
+    chips.forEach(chip=>chip.classList.toggle('active',chosen.size===0?chip.dataset.filter==='Tout':chosen.size===1&&chosen.has(chip.dataset.filter)));
+  }
+  function apply(){
+    const query=(document.getElementById('searchInput')?.value||'').trim().toLocaleLowerCase('fr');
+    cards().forEach(card=>{
+      const matchesQuery=!query||(card.dataset.name||'').toLocaleLowerCase('fr').includes(query)||(card.dataset.brand||'').toLocaleLowerCase('fr').includes(query)||(card.dataset.manufacturer||'').toLocaleLowerCase('fr').includes(query);
+      const matchesFacets=facets.every(facet=>{const choices=selected.get(facet.key);return !choices.size||choices.has(card.dataset[facet.key]||'');});
+      card.hidden=!(matchesQuery&&matchesFacets);
+    });
+    syncCount();syncCategoryChips();
+    if(typeof refreshCatalogEmpty==='function')refreshCatalogEmpty();
+  }
+  buildOptions();
+  toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));panel.hidden=!open;});
+  groups.addEventListener('change',event=>{
+    const input=event.target.closest('input[data-facet]');if(!input)return;
+    const choices=selected.get(input.dataset.facet);if(input.checked)choices.add(input.value);else choices.delete(input.value);apply();
+  });
+  reset?.addEventListener('click',()=>{selected.forEach(choices=>choices.clear());groups.querySelectorAll('input[type="checkbox"]').forEach(input=>input.checked=false);apply();});
+  document.querySelector('.filters')?.addEventListener('click',event=>{
+    const chip=event.target.closest('[data-filter]');if(!chip)return;
+    const choices=selected.get('type');choices.clear();if(chip.dataset.filter!=='Tout')choices.add(chip.dataset.filter);
+    groups.querySelectorAll('input[data-facet="type"]').forEach(input=>input.checked=choices.has(input.value));
+    apply();
+  });
+  document.getElementById('searchInput')?.addEventListener('input',apply);
+  const categoryAliases={'Journalières':'1 jour','Mensuelles':'30 jours','Bimensuelles':'15 jours'};
+  document.querySelectorAll('[data-category]').forEach(link=>link.addEventListener('click',()=>{
+    const choices=selected.get('type');choices.clear();choices.add(categoryAliases[link.dataset.category]||link.dataset.category);
+    groups.querySelectorAll('input[data-facet="type"]').forEach(input=>input.checked=choices.has(input.value));apply();
+  }));
+  document.addEventListener('click',event=>{if(!panel.hidden&&!event.target.closest('.catalog-toolbar')){panel.hidden=true;toggle.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!panel.hidden){panel.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.focus();}});
+  apply();
+})();
+</script></body>
 </html>
