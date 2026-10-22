@@ -1,30 +1,42 @@
-# FORMA — Virtual Eyewear Studio
+# FORMA Optique — boutique lunettes & lentilles
 
-A static eyewear storefront demo with a live virtual try-on fitting room. Visitors can browse sample frames, filter the collection, switch frame styles, and preview glasses on a live camera feed.
+Boutique statique en français, pensée pour le marché tunisien : montures optiques, lunettes de soleil, lentilles de couleur, lentilles correctrices et entretien des lentilles.
 
-## Try it locally
+## Catalogue actuel
 
-Serve this repository root with a static web server, then open its URL in a browser. For example:
+- **SKU27862** — monture optique vert translucide, **57 TND**. C'est la seule référence et le seul prix confirmés dans le stock reçu.
+- Les autres fiches affichent des **repères de prix observés chez des vendeurs tunisiens**, et non des produits ou tarifs FORMA confirmés. Elles doivent être remplacées par vos références réelles avant de prendre des commandes.
+
+Repères consultés le 22 octobre 2026 : montures entrée de gamme 55–120 TND ; lunettes solaires entrée de gamme 15–60 TND ; collections d'opticien de quelques centaines à plus de 2 000 TND ; lentilles colorées 90 TND la paire en promotion ou 120 TND la boîte de cinq paires ; lentilles Clarity 1 Day à partir de 160 TND ; solution multifonctions 360 ml autour de 30–35 TND. Les prix changent selon marque, format et promotion.
+
+### Sources marché
+
+- [Nyvara](https://www.nyvara.net/)
+- [AZZABI Optic — lunettes de vue](https://azzabioptic.com/lunettes-de-vue/lunettes-de-vue-femme/page/2/)
+- [AZZABI Optic — lunettes de soleil](https://azzabioptic.com/lunettes-de-soleil/lunettes-de-soleil-femme/)
+- [Tun Shop — lunettes de soleil](https://tun-shop.tn/collections/lunettes-soleil)
+- [Tunis Lenses — lentilles colorées](https://tunislenses.com/)
+- [AZZABI Optic — lentilles de contact](https://azzabioptic.com/categorie-produit/lentilles-de-contact/)
+- [B Pharma — solution pour lentilles 360 ml](https://www.bpharma.tn/produit/eye-care-pharma-souples-solution-pour-lentilles-360ml/)
+
+## Fonctionnalités
+
+- Catalogue filtrable par famille de produits.
+- Essayage caméra en direct de la monture SKU27862.
+- Galerie photo produit issue des vues reçues.
+- Les cartes de prix marché renvoient vers leur source et sont identifiées comme non confirmées.
+- L'essayage reste dans le navigateur et ne téléverse pas la vidéo.
+
+## Lancer localement
+
+Servir la racine du dépôt avec un serveur web statique et ouvrir en HTTPS, ou en localhost pour l'essai caméra. Par exemple :
 
 ```bash
 python -m http.server 8000
 ```
 
-Open http://localhost:8000. Camera access requires a secure context, such as localhost or an HTTPS deployment. A plain HTTP address on a local network may not be permitted to access a phone's camera.
+Ouvrir `http://localhost:8000`. L'essayage charge MediaPipe Tasks Vision depuis un CDN et son modèle depuis Google, donc une connexion internet est nécessaire au démarrage du suivi.
 
-## Try-on flow
+## Publication GitHub Pages
 
-1. Select a frame from the collection or the carousel.
-2. Choose **Open the fitting room**.
-3. Allow camera access in the browser.
-4. Switch styles while the face tracker positions the selected frame.
-
-The demo processes the camera feed in the browser. It does not record or upload video. Face tracking loads MediaPipe Tasks Vision and its model from external CDNs when the camera is enabled, so an internet connection is required.
-
-## GitHub Pages
-
-The site is a single static `index.html`. In the repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/(root)`, then save. GitHub will provide an HTTPS page URL after deployment.
-
-## Demo catalog
-
-Frame names, product descriptions, and prices are sample content. Replace them with the real inventory before using this as a live store.
+Le dépôt publie `index.html` depuis la branche `main`. GitHub Actions construit et publie la version à chaque mise à jour.
