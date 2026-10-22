@@ -24,11 +24,14 @@ footer{border-top:1px solid var(--line);padding:24px 0 32px;display:flex;justify
 @media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.visual{height:185px}.benchmark{grid-template-columns:1fr;gap:14px}}
 @media(max-width:650px){.announcement{font-size:9px}.nav{padding:0 16px}.navcats{gap:13px;font-size:10px}.navright{display:none}main{padding:0 15px}.intro{padding-top:23px;display:block}.intro h1{font-size:38px;letter-spacing:-1.7px}.intro p{max-width:100%;margin-top:11px}.controls{align-items:flex-start;flex-direction:column;gap:10px}.sortnote{white-space:normal}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.visual{height:148px}.lens{width:53px;height:53px}.single{width:68px;height:68px}.box{width:104px;height:70px}.bottle{transform:scale(.86)}.dropBottle{transform:scale(.85)}.details{padding:11px 10px}.name{font-size:13px;min-height:34px}.price{font-size:20px}.source{font-size:8px}.benchmark{padding:17px}.stats{gap:8px}.stat{padding-left:8px}.stat b{font-size:16px}.stat span{font-size:8px}footer{display:block}.sources{margin-top:12px}}
 @media(max-width:390px){.navcats{gap:8px;font-size:9px}.intro h1{font-size:34px}.visual{height:132px}.price{font-size:18px}}
+
+.navActions{display:flex;gap:8px}.navAction{border:1px solid var(--dark);border-radius:30px;background:var(--dark);color:white;padding:9px 14px;font-size:11px;font-weight:800}.navAction.adminLink{background:transparent;color:var(--dark)}.buy:disabled{background:#e6e5df;color:#787970;cursor:not-allowed}.priceRow .price{font-size:17px;white-space:normal}.source{max-width:96px}.panels{position:fixed;inset:0;background:#1118;z-index:30;display:flex;justify-content:flex-end}.panels[hidden]{display:none}.drawer{position:relative;width:min(540px,100%);height:100%;overflow:auto;background:var(--paper);padding:30px 24px 40px;box-shadow:-10px 0 40px #0002}.panelClose{position:absolute;right:18px;top:15px;border:0;background:transparent;font-size:32px;line-height:1}.drawer h2{font:800 28px var(--display);margin:0 0 18px}.drawer h3{font:700 17px var(--display);margin:24px 0 12px}.cartLine{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.cartLine img{width:64px;height:60px;object-fit:contain;background:white}.cartLine strong,.cartLine small{display:block}.cartLine small{font-size:11px;color:var(--muted);margin-top:4px}.cartLine>b{font-size:12px;white-space:nowrap}.qty{display:flex;align-items:center;gap:12px;margin-top:8px}.qty button{border:1px solid var(--line);background:white;width:25px;height:25px;border-radius:50%}.emptyCart{padding:18px;background:white;color:var(--muted);font-size:13px}.cartGrand{display:flex;justify-content:space-between;padding:17px 0;border-bottom:1px solid var(--line);font-size:16px}.checkoutForm label{display:block;font-size:12px;font-weight:700;margin:11px 0}.checkoutForm input,.adminProduct input:not([type=checkbox]){display:block;width:100%;margin-top:5px;padding:11px;border:1px solid #d5d6ce;background:white;border-radius:3px;font:inherit}.submitOrder{width:100%;margin-top:12px;padding:13px;border:0;background:var(--dark);color:white;font-weight:800}.localNotice,.adminWarning{padding:11px;background:#fff1c8;color:#594d28;font-size:11px;line-height:1.5}.noticeSuccess{padding:14px;background:#e5efd5;font-size:12px;line-height:1.6}.adminWarning{margin:8px 0 18px}.adminProduct{display:grid;grid-template-columns:54px minmax(100px,1fr) 85px 75px 96px;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.adminProduct>img{width:54px;height:48px;object-fit:contain;background:white}.adminName b,.adminName small{display:block}.adminName b{font-size:11px}.adminName small{font-size:9px;color:var(--muted);margin-top:4px}.adminProduct label{font-size:9px;font-weight:700}.adminProduct input:not([type=checkbox]){padding:7px 5px;font-size:11px}.adminProduct .availability{display:flex;align-items:center;gap:5px}.exportOrders{padding:9px 12px;border:1px solid var(--dark);background:transparent;font-size:11px;font-weight:700}.orderCard{background:white;border:1px solid var(--line);padding:12px;margin:10px 0;font-size:11px}.orderTop{display:flex;justify-content:space-between;align-items:center;gap:7px;flex-wrap:wrap}.orderTop select{padding:6px}.orderCard p{line-height:1.6}.orderCard ul{padding-left:18px;line-height:1.6}
+@media(max-width:650px){.navActions{gap:5px}.navAction{padding:8px 10px;font-size:10px}.drawer{padding:28px 15px}.adminProduct{grid-template-columns:42px minmax(70px,1fr) 72px 60px}.adminProduct>img{width:42px;height:42px}.adminProduct .availability{grid-column:2/-1}.navcats{gap:9px}.nav{padding:0 10px}}
 </style>
 </head>
 <body>
 <div class="announcement"><b>FORMA LENS</b> · N°1 DES LENTILLES EN TUNISIE <span class="delivery">· LIVRAISON EN 24H</span></div>
-<header><div class="nav"><a class="logo" href="#">FORMA<span>.</span></a><nav class="navcats"><a href="#catalogue" data-jump="lens">Lentilles</a><a href="#catalogue" data-jump="solutions">Solutions</a><a href="#catalogue" data-jump="drops">Gouttes</a></nav><div class="navright">Prix visibles · sélection en ligne</div></div></header>
+<header><div class="nav"><a class="logo" href="#">FORMA<span>.</span></a><nav class="navcats"><a href="#catalogue" data-jump="lens">Lentilles</a><a href="#catalogue" data-jump="solutions">Solutions</a><a href="#catalogue" data-jump="drops">Gouttes</a></nav><div class="navActions"><button id="cartOpen" class="navAction">Panier <span id="cartCount">0</span></button><button id="adminOpen" class="navAction adminLink">Admin</button></div></div></header>
 <main>
 <section class="intro"><div><div class="kicker">Lentilles · Solutions · Gouttes</div><h1>Le N°1 des lentilles<br><span>en Tunisie.</span></h1></div><p>Les produits et les prix tout de suite. Comparez une sélection de références trouvées chez des vendeurs en ligne tunisiens.</p></section>
 <section id="catalogue">
@@ -38,7 +41,12 @@ footer{border-top:1px solid var(--line);padding:24px 0 32px;display:flex;justify
 </section>
 <section class="benchmark"><div><div class="kicker" style="color:#c7ef52">Benchmark e-commerce tunisien</div><h2>Ce que les boutiques en ligne mettent en avant</h2><p>Prix dès la fiche produit, durée et nombre de lentilles, frais/délai de livraison et mode de paiement clairement annoncés.</p></div><div class="stats"><div class="stat"><b>90 TND</b><span>3D Colors en promotion chez Tunis Lenses (au lieu de 150 TND).</span></div><div class="stat"><b>24–48 h</b><span>Délai annoncé par Tunis Lenses, livraison nationale à 7 TND.</span></div><div class="stat"><b>À réception</b><span>Paiement à la livraison proposé par les boutiques spécialisées étudiées.</span></div></div></section>
 <footer><div><a class="logo" href="#">FORMA<span>.</span></a><br>Un regard, les bons produits.</div><div class="sources">Sources du benchmark : <a href="https://tunislenses.com/" target="_blank" rel="noopener">Tunis Lenses</a><a href="https://azzabioptic.com/categorie-produit/lentilles-de-contact/" target="_blank" rel="noopener">AZZABI Optic</a><a href="https://www.bpharma.tn/produit/eye-care-pharma-souples-solution-pour-lentilles-360ml/" target="_blank" rel="noopener">B Pharma</a><a href="https://m-medicalstore.tn/4527-eye-care-uniflow-10-ml.html" target="_blank" rel="noopener">M Medical Store</a><br>Les références et tarifs restent des exemples de marché tant que la sélection FORMA n’est pas confirmée.</div></footer>
-</main>
+
+<div id="panels" class="panels" hidden><section class="drawer" role="dialog" aria-modal="true"><button id="panelClose" class="panelClose" aria-label="Fermer">×</button>
+<div id="cartPanel" hidden><div class="kicker">Votre sélection</div><h2>Mon panier</h2><div id="cartItems"></div><div class="cartGrand"><span>Total</span><b id="cartTotal">0 TND</b></div>
+<form id="checkoutForm" class="checkoutForm"><h3>Je passe ma commande</h3><label>Nom complet<input name="name" type="text" autocomplete="name" required></label><label>Téléphone<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+216" required></label><label>Adresse de livraison<input name="address" type="text" autocomplete="street-address" required></label><label>Ville / gouvernorat<input name="city" type="text" autocomplete="address-level1" required></label><button class="submitOrder" type="submit">Confirmer ma commande</button><p class="localNotice">Démo locale : la commande est enregistrée dans ce navigateur. Elle n’est pas encore transmise à la boutique.</p><div id="orderNotice"></div></form></div>
+<div id="adminPanel" hidden><div class="kicker">Espace de gestion</div><h2>Stock & commandes</h2><p class="adminWarning"><b>Mode local :</b> ces données sont sauvegardées dans ce navigateur uniquement. Elles ne sont ni privées ni synchronisées avec les autres visiteurs. Ne l’utilisez pas pour gérer de vraies commandes avant la connexion d’un backend.</p><h3>Produits & disponibilité</h3><div id="adminProducts" class="adminProducts"></div><button id="saveInventory" class="submitOrder" type="button">Enregistrer le stock</button><h3>Commandes de ce navigateur</h3><button id="exportOrders" class="exportOrders" type="button">Exporter les commandes CSV</button><div id="adminOrders" class="adminOrders"></div></div>
+</section></div></main>
 <script>
 const products=[
 {cat:"lens",name:"Lentilles Wonderlook",variant:"Couleur · 12 teintes",price:"120",unit:"TND",meta:"Boîte de 5 paires · port 1 mois · sans correction",source:"Tunis Lenses",url:"https://tunislenses.com/wonderlook/",img:"https://tunislenses.com/wp-content/uploads/2026/10/wl-box-duo.webp",alt:"Boîte de lentilles colorées Wonderlook"},
@@ -59,13 +67,100 @@ const products=[
 {cat:"drops",name:"Innoxa Hydralose",variant:"Gouttes hydratantes · 10 ml",price:"35,100",unit:"TND",meta:"Gouttes hydratantes · prix promotionnel affiché sur la fiche source",source:"Phytonat",url:"https://phytonat.tn/produit/innoxa-hydralose-gouttes-oculaires-hydratantes-10-ml/",img:"https://www.illicopharma.com/113517-thickbox_default/innoxa-hydralose-gouttes-oculaires-hydratantes-10ml.jpg",alt:"Flacon de gouttes oculaires Innoxa Hydralose 10 ml"},
 {cat:"drops",name:"Visionlux Plus",variant:"Gouttes oculaires · 10 ml",price:"46,635",unit:"TND",meta:"Flacon 10 ml · prix repéré sur une parapharmacie tunisienne",source:"1001para",url:"https://1001para.tn/accueil/12701-visionlux-plus-gouttes-oculaire-10-ml-6191450601153.html",img:"https://1001para.tn/25522-large_default/visionlux-plus-gouttes-oculaire-10-ml.jpg",alt:"Flacon de gouttes oculaires Visionlux Plus 10 ml"}
 ];
+
+// Static-site preview: catalog, inventory, cart, and order book live in this browser only.
+const storeKey="formaStoreV1", orderKey="formaOrdersV1", cartKey="formaCartV1";
+const slug=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const catalogMap=new Map();
+for(const p of products){
+ const id=p.cat+"-"+slug(p.name);
+ const n=parseFloat(String(p.price).replace(",",".").split(/[–-]/)[0])||0;
+ if(!catalogMap.has(id))catalogMap.set(id,{...p,id,defaultPrice:n,marketPrices:[n],offers:[p.source]});
+ else {const v=catalogMap.get(id);v.marketPrices.push(n);v.offers.push(p.source);}
+}
+const catalog=[...catalogMap.values()];
+const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
+let inventory=read(storeKey,{});
+let orders=read(orderKey,[]);
+let cart=read(cartKey,{});
+catalog.forEach(p=>{if(!inventory[p.id])inventory[p.id]={available:false,stock:0,price:p.defaultPrice};});
+const writeState=()=>{localStorage.setItem(storeKey,JSON.stringify(inventory));localStorage.setItem(orderKey,JSON.stringify(orders));localStorage.setItem(cartKey,JSON.stringify(cart));};
+const money=n=>Number(n||0).toLocaleString("fr-TN",{minimumFractionDigits:3,maximumFractionDigits:3})+" TND";
 function render(filter="all"){
- const shown=filter==="all"?products:products.filter(p=>p.cat===filter);
- document.querySelector("#grid").innerHTML=shown.map(p=>'<article class="card"><div class="visual '+(p.cat==="lens"?"color":p.cat==="solutions"?"solution":"drops")+'"><span class="pill">'+p.variant+'</span><img class="productPhoto" src="'+p.img+'" alt="'+p.alt+'" loading="lazy"></div><div class="details"><div class="type">'+(p.cat==="lens"?"Lentilles":p.cat==="solutions"?"Solutions":"Gouttes")+'</div><h2 class="name">'+p.name+'</h2><div class="meta">'+p.meta+'</div><div class="priceRow"><div class="price">'+(p.old?'<s style="font-size:12px;color:#9b9b94;margin-right:4px">'+p.old+'</s>':'')+p.price+' <small>'+p.unit+'</small></div><span class="source">'+p.source+'<br>prix repère</span></div><a class="buy" href="'+p.url+'" target="_blank" rel="noopener">Voir l’offre source ↗</a></div></article>').join("");
+ const shown=(filter==="all"?catalog:catalog.filter(p=>p.cat===filter));
+ document.querySelector("#grid").innerHTML=shown.map(p=>{
+  const st=inventory[p.id], range=[Math.min(...p.marketPrices),Math.max(...p.marketPrices)];
+  const market=range[0]===range[1]?money(range[0]):"Repère "+money(range[0])+"–"+money(range[1]);
+  const canBuy=st.available&&st.stock>0&&st.price>0;
+  return '<article class="card"><div class="visual '+(p.cat==="lens"?"color":p.cat==="solutions"?"solution":"drops")+'"><span class="pill">'+p.variant+'</span><img class="productPhoto" src="'+p.img+'" alt="'+p.alt+'" loading="lazy"></div><div class="details"><div class="type">'+(p.cat==="lens"?"Lentilles":p.cat==="solutions"?"Solutions":"Gouttes")+'</div><h2 class="name">'+p.name+'</h2><div class="meta">'+p.meta+'</div><div class="priceRow"><div class="price">'+(canBuy?money(st.price):market)+'</div><span class="source">'+(canBuy?st.stock+" en stock":st.available?"Rupture":"Indisponible")+'</span></div><button class="buy addCart" data-id="'+p.id+'" '+(canBuy?"":"disabled")+'>'+(canBuy?"Ajouter au panier":"Indisponible")+'</button></div></article>';
+ }).join("");
+ document.querySelectorAll(".addCart").forEach(b=>b.addEventListener("click",()=>addToCart(b.dataset.id)));
+}
+function cartLines(){
+ const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,q])=>({p:catalog.find(x=>x.id===id),q})).filter(x=>x.p);
+ const total=items.reduce((s,x)=>s+(Number(inventory[x.p.id].price)||0)*x.q,0);
+ document.querySelector("#cartItems").innerHTML=items.length?items.map(({p,q})=>'<div class="cartLine"><img src="'+p.img+'" alt=""><div><strong>'+p.name+'</strong><small>'+money(inventory[p.id].price)+' / unité</small><div class="qty"><button type="button" data-minus="'+p.id+'" aria-label="Retirer un article">−</button><span>'+q+'</span><button type="button" data-plus="'+p.id+'" aria-label="Ajouter un article">+</button></div></div><b>'+money(inventory[p.id].price*q)+'</b></div>').join(""):'<p class="emptyCart">Votre panier est vide.</p>';
+ document.querySelector("#cartTotal").textContent=money(total);
+ document.querySelector("#cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);
+ document.querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.minus,-1));
+ document.querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.plus,1));
+}
+function addToCart(id){
+ const p=catalog.find(x=>x.id===id), st=inventory[id];
+ if(!p||!st?.available||st.stock<=0)return;
+ if((cart[id]||0)>=st.stock){alert("La quantité en stock est atteinte.");return;}
+ cart[id]=(cart[id]||0)+1;writeState();cartLines();openPanel("cart");
+}
+function changeQty(id,delta){
+ const next=(cart[id]||0)+delta, max=inventory[id]?.stock||0;
+ if(next<=0)delete cart[id];else if(next<=max)cart[id]=next;else return;
+ writeState();cartLines();
+}
+function openPanel(which){
+ document.querySelector("#panels").hidden=false;
+ document.querySelector("#cartPanel").hidden=which!=="cart";
+ document.querySelector("#adminPanel").hidden=which!=="admin";
+ document.body.classList.add("panelOpen");
+ if(which==="cart")cartLines();else renderAdmin();
+}
+function closePanel(){document.querySelector("#panels").hidden=true;document.body.classList.remove("panelOpen");}
+function renderAdmin(){
+ document.querySelector("#adminProducts").innerHTML=catalog.map(p=>{
+  const st=inventory[p.id];
+  return '<div class="adminProduct"><img src="'+p.img+'" alt=""><div class="adminName"><b>'+p.name+'</b><small>'+p.variant+'</small></div><label>Prix (TND)<input type="number" min="0" step="0.001" data-price="'+p.id+'" value="'+Number(st.price).toFixed(3)+'"></label><label>Stock<input type="number" min="0" step="1" data-stock="'+p.id+'" value="'+Number(st.stock)+'"></label><label class="availability"><input type="checkbox" data-available="'+p.id+'" '+(st.available?"checked":"")+'> Disponible</label></div>';
+ }).join("");
+ document.querySelector("#adminOrders").innerHTML=orders.length?orders.slice().reverse().map(o=>'<article class="orderCard"><div class="orderTop"><b>'+o.ref+'</b><span>'+new Date(o.createdAt).toLocaleString("fr-TN")+'</span><select data-status="'+o.ref+'">'+["À traiter","Confirmée","Expédiée","Terminée","Annulée"].map(s=>'<option '+(o.status===s?"selected":"")+'>'+s+'</option>').join("")+'</select></div><p><b>'+o.customer.name+'</b> · '+o.customer.phone+'<br>'+o.customer.address+'</p><ul>'+o.items.map(i=>'<li>'+i.name+' × '+i.qty+' — '+money(i.price*i.qty)+'</li>').join("")+'</ul><strong>Total : '+money(o.total)+'</strong></article>').join(""):'<p class="emptyCart">Aucune commande enregistrée dans ce navigateur.</p>';
+ document.querySelectorAll("[data-status]").forEach(s=>s.onchange=()=>{const o=orders.find(x=>x.ref===s.dataset.status);if(o){o.status=s.value;writeState();}});
 }
 document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render(b.dataset.filter)}));
 document.querySelectorAll("[data-jump]").forEach(a=>a.addEventListener("click",()=>{const key=a.dataset.jump;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===key));render(key)}));
-render();
-</script>
+document.querySelector("#cartOpen").onclick=()=>openPanel("cart");
+document.querySelector("#adminOpen").onclick=()=>openPanel("admin");
+document.querySelector("#panelClose").onclick=closePanel;
+document.querySelector("#panels").addEventListener("click",e=>{if(e.target.id==="panels")closePanel();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closePanel();});
+document.querySelector("#saveInventory").onclick=()=>{
+ document.querySelectorAll("[data-price]").forEach(x=>inventory[x.dataset.price].price=Math.max(0,Number(x.value)||0));
+ document.querySelectorAll("[data-stock]").forEach(x=>inventory[x.dataset.stock].stock=Math.max(0,Math.floor(Number(x.value)||0)));
+ document.querySelectorAll("[data-available]").forEach(x=>inventory[x.dataset.available].available=x.checked);
+ writeState();render();cartLines();renderAdmin();alert("Stock enregistré sur cet appareil.");
+};
+document.querySelector("#exportOrders").onclick=()=>{
+ const rows=[["Commande","Date","Statut","Nom","Téléphone","Adresse","Articles","Total"],...orders.map(o=>[o.ref,o.createdAt,o.status,o.customer.name,o.customer.phone,o.customer.address,o.items.map(i=>i.name+" x "+i.qty).join(" | "),o.total])];
+ const csv=rows.map(r=>r.map(v=>'"'+String(v??"").replaceAll('"','""')+'"').join(";")).join("\r\n");
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="forma-commandes.csv";a.click();URL.revokeObjectURL(a.href);
+};
+document.querySelector("#checkoutForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,qty])=>({p:catalog.find(x=>x.id===id),qty})).filter(x=>x.p);
+ if(!items.length){alert("Votre panier est vide.");return;}
+ if(items.some(x=>!inventory[x.p.id].available||inventory[x.p.id].stock<x.qty)){alert("Le stock a changé. Vérifiez votre panier.");return;}
+ const fd=new FormData(e.currentTarget), now=new Date(), ref="FL-"+now.getTime().toString().slice(-7);
+ const order={ref,createdAt:now.toISOString(),status:"À traiter",customer:{name:fd.get("name"),phone:fd.get("phone"),address:fd.get("address"),city:fd.get("city")},items:items.map(x=>({name:x.p.name,qty:x.qty,price:Number(inventory[x.p.id].price)})),total:items.reduce((s,x)=>s+Number(inventory[x.p.id].price)*x.qty,0)};
+ items.forEach(x=>{inventory[x.p.id].stock-=x.qty;if(inventory[x.p.id].stock<=0)inventory[x.p.id].available=false;});
+ orders.push(order);cart={};writeState();render();cartLines();renderAdmin();e.currentTarget.reset();
+ document.querySelector("#orderNotice").innerHTML='<div class="noticeSuccess"><b>Commande '+ref+' enregistrée sur cet appareil.</b><br>Pour le moment, le vendeur ne la reçoit pas automatiquement. Le site doit être relié à votre destination de commandes.</div>';
+});
+render();cartLines();</script>
 </body>
 </html>
