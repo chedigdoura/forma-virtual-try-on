@@ -1,42 +1,41 @@
-# FORMA — lentilles de contact
+# FORMA Lens — lentilles et entretien
 
-Boutique statique en français dédiée exclusivement aux lentilles de contact : lentilles colorées, lentilles correctrices et options journalières ou mensuelles. Aucune monture ni lunettes n'est proposée.
+Boutique statique en français pour lentilles de contact et produits conçus pour leur entretien : lentilles colorées ou correctrices, solution multifonctions spéciale lentilles et gouttes indiquées comme compatibles. Aucune monture ni lunettes n'est proposée. Le site n'a pas de simulateur.
 
-## Catalogue
+## Catalogue et benchmark tunisien
 
-Les produits et les tarifs doivent être renseignés à partir du stock réel de FORMA. Les prix affichés à titre de comparaison dans le benchmark ci-dessous sont des prix relevés chez des vendeurs tunisiens, pas des prix FORMA ni une confirmation de disponibilité.
+Les fiches et montants sont des exemples et repères relevés chez des vendeurs tunisiens. Ils ne confirment ni le stock ni les tarifs FORMA. Les références réelles, corrections, conditionnements, prix et coordonnées de commande FORMA restent à renseigner.
 
-## Repères de prix en Tunisie
+Prix publics consultés le 22 octobre 2026 ; ils varient selon promotions et conditionnements :
 
-Relevé le 22 octobre 2026 ; les prix varient selon marque, durée d'utilisation, correction, nombre de lentilles et promotions :
-
-- **Lentilles colorées** : environ **90 TND la paire** en promotion chez Tunis Lenses (prix affiché hors promotion : 150 TND) ; **120 TND la boîte de 5 paires** pour une référence Wonderlook.
-- **Lentilles journalières correctrices** : une référence Clarity 1 Day affichée à **160 TND** chez AZZABI Optic.
-- **Autres lentilles colorées** : références autour de **140–150 TND** chez AZZABI Optic.
-
-Ces exemples sont des repères de marché, pas des prix ou des références de stock FORMA. Vérifier les prix et la disponibilité auprès des vendeurs avant publication commerciale.
+- **Lentilles colorées** : 90 TND la paire en promotion (150 TND hors promotion) chez Tunis Lenses ; Wonderlook à 120 TND la boîte de cinq paires.
+- **Lentilles couleur** : exemples autour de 140–150 TND chez AZZABI Optic.
+- **Lentilles journalières** : une référence Clarity 1 Day à partir de 160 TND chez AZZABI Optic.
+- **Solution multifonctions Eye Care Pharma Souples, 360 ml** : environ 30–35 TND chez B Pharma et Phytonat.
+- **Gouttes hydratantes Uniflow, 10 ml** : environ 26–28 TND chez des vendeurs tunisiens ; vérifier la compatibilité sur la notice.
 
 ### Sources consultées
 
-- [Tunis Lenses](https://tunislenses.com/) — lentilles colorées et formats
+- [Tunis Lenses](https://tunislenses.com/) — lentilles colorées
 - [AZZABI Optic — lentilles de contact](https://azzabioptic.com/categorie-produit/lentilles-de-contact/)
+- [B Pharma — solution Eye Care Pharma Souples 360 ml](https://www.bpharma.tn/produit/eye-care-pharma-souples-solution-pour-lentilles-360ml/)
+- [Phytonat — solution Eye Care Pharma Souples 360 ml](https://phytonat.tn/produit/eye-care-pharma-souple-solution-lentilles-360ml/)
+- [M Medical Store — gouttes Uniflow 10 ml](https://m-medicalstore.tn/4527-eye-care-uniflow-10-ml.html)
+- [Pharmashop — gouttes Uniflow 10 ml](https://pharmashop.tn/accueil/891-eye-care-uniflow-gouttes-oculaires-d-hydratation-10ml.html)
 
-## Fonctionnalités du site
+## Fonctionnalités
 
-- Présentation de catégories de lentilles et comparaison indicative des prix du marché tunisien.
-- Sélection interactive des couleurs.
-- Liens vers les sources des exemples de prix.
-- Aucune monture, lunette de soleil ou fonctionnalité d'essayage de lunettes.
+- Catalogue filtrable : lentilles couleur, correctrices, journalières, mensuelles et produits d'entretien.
+- Fiches de référence avec prix indicatifs et liens sources.
+- Aucune monture, lunettes ou simulation.
 
 ## Lancer localement
-
-Depuis la racine du dépôt, lancer un serveur statique :
 
 ```bash
 python -m http.server 8000
 ```
 
-Ouvrir ensuite http://localhost:8000 dans le navigateur.
+Ouvrir http://localhost:8000.
 
 ## Publication
 
