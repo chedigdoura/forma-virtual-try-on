@@ -80,7 +80,7 @@ async function startCamera(){
  }catch(cameraError){
   console.error("Camera access failed.",cameraError);
   msg.textContent=cameraError.name==="NotAllowedError"?"Safari blocked camera access. In Safari, tap aA in the address bar → Website Settings → Camera → Allow, then reload and try again.":cameraError.name==="NotFoundError"?"Safari could not find a camera on this device.":"Safari could not start the camera ("+(cameraError.name||"unknown error")+"). Reload the HTTPS page and try again.";
-  setTimeout(()=>msg.style.display="none",6500)
+  msg.style.display="block"
  }finally{starting=false}
 }
 function loop(){if(!running||!landmarker)return;requestAnimationFrame(loop);if(video.readyState<2||video.currentTime===lastTime)return;lastTime=video.currentTime;try{const result=landmarker.detectForVideo(video,performance.now());drawFrame(result.faceLandmarks&&result.faceLandmarks[0])}catch(e){}}
