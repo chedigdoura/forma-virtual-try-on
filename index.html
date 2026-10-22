@@ -44,11 +44,10 @@ footer{border-top:1px solid var(--line);padding:24px 0 32px;display:flex;justify
 
 <div id="panels" class="panels" hidden><section class="drawer" role="dialog" aria-modal="true"><button id="panelClose" class="panelClose" aria-label="Fermer">×</button>
 <div id="cartPanel" hidden><div class="kicker">Votre sélection</div><h2>Mon panier</h2><div id="cartItems"></div><div class="cartGrand"><span>Total</span><b id="cartTotal">0 TND</b></div>
-<form id="checkoutForm" class="checkoutForm"><h3>Je passe ma commande</h3><label>Nom complet<input name="name" type="text" autocomplete="name" required></label><label>Téléphone<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+216" required></label><label>Adresse de livraison<input name="address" type="text" autocomplete="street-address" required></label><label>Ville / gouvernorat<input name="city" type="text" autocomplete="address-level1" required></label><button class="submitOrder" type="submit">Confirmer ma commande</button><p class="localNotice">Démo locale : la commande est enregistrée dans ce navigateur. Elle n’est pas encore transmise à la boutique.</p><div id="orderNotice"></div></form></div>
-<div id="adminPanel" hidden><div class="kicker">Espace de gestion</div><h2>Stock & commandes</h2><p class="adminWarning"><b>Mode local :</b> ces données sont sauvegardées dans ce navigateur uniquement. Elles ne sont ni privées ni synchronisées avec les autres visiteurs. Ne l’utilisez pas pour gérer de vraies commandes avant la connexion d’un backend.</p><h3>Produits & disponibilité</h3><div id="adminProducts" class="adminProducts"></div><button id="saveInventory" class="submitOrder" type="button">Enregistrer le stock</button><h3>Commandes de ce navigateur</h3><button id="exportOrders" class="exportOrders" type="button">Exporter les commandes CSV</button><div id="adminOrders" class="adminOrders"></div></div>
+<form id="checkoutForm" class="checkoutForm"><h3>Je passe ma commande</h3><label>Nom complet<input name="name" type="text" autocomplete="name" required></label><label>Téléphone<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+216" required></label><label>Adresse de livraison<input name="address" type="text" autocomplete="street-address" required></label><label>Ville / gouvernorat<input name="city" type="text" autocomplete="address-level1" required></label><button class="submitOrder" type="submit">Confirmer ma commande</button><p id="localNotice" class="localNotice">Démo locale : la commande est enregistrée dans ce navigateur. Elle n’est pas encore transmise à la boutique.</p><div id="orderNotice"></div></form></div>
+<div id="adminPanel" hidden><div class="kicker">Espace de gestion</div><h2>Stock & commandes</h2><p id="localAdminWarning" class="adminWarning"><b>Mode local :</b> données visibles seulement dans ce navigateur. Configurez le backend central pour synchroniser commandes et stock.</p><form id="adminLogin" class="checkoutForm" hidden><label>Email administrateur<input type="email" name="email" autocomplete="username" required></label><label>Mot de passe<input type="password" name="password" autocomplete="current-password" required></label><button class="submitOrder">Connexion admin</button></form><div id="adminContent" hidden><h3>Produits & disponibilité</h3><div id="adminProducts" class="adminProducts"></div><button id="saveInventory" class="submitOrder" type="button">Enregistrer le stock</button><h3>Commandes</h3><button id="exportOrders" class="exportOrders" type="button">Exporter les commandes CSV</button><button id="adminLogout" class="exportOrders" type="button">Déconnexion</button><div id="adminOrders" class="adminOrders"></div></div></div>
 </section></div></main>
-<script>
-const products=[
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./supabase-config.js"></script><script>const products=[
 {cat:"lens",name:"Lentilles Wonderlook",variant:"Couleur · 12 teintes",price:"120",unit:"TND",meta:"Boîte de 5 paires · port 1 mois · sans correction",source:"Tunis Lenses",url:"https://tunislenses.com/wonderlook/",img:"https://tunislenses.com/wp-content/uploads/2026/10/wl-box-duo.webp",alt:"Boîte de lentilles colorées Wonderlook"},
 {cat:"lens",name:"3D Colors",variant:"Couleur · 12 teintes",price:"90",old:"150",unit:"TND",meta:"La paire · port jusqu’à 6 mois · sans correction",source:"Tunis Lenses",url:"https://tunislenses.com/3d-colors/",img:"https://tunislenses.com/wp-content/uploads/2026/10/3d-pack-family.jpg",alt:"Boîtes de lentilles colorées 3D Colors"},
 {cat:"lens",name:"Soft Vision Color",variant:"Couleur · vert F-Green",price:"70–80",unit:"TND",meta:"Boîte de 2 lentilles · durée annoncée trimestrielle · options correctrices selon disponibilité",source:"AZZABI Optic",url:"https://azzabioptic.com/produit/lentilles-vertes-soft-vision-f-green/",img:"https://azzabioptic.com/wp-content/uploads/2025/09/9-2-299x299.jpg.webp",alt:"Visuel de lentille de couleur du catalogue AZZABI Optic"},
@@ -67,100 +66,118 @@ const products=[
 {cat:"drops",name:"Innoxa Hydralose",variant:"Gouttes hydratantes · 10 ml",price:"35,100",unit:"TND",meta:"Gouttes hydratantes · prix promotionnel affiché sur la fiche source",source:"Phytonat",url:"https://phytonat.tn/produit/innoxa-hydralose-gouttes-oculaires-hydratantes-10-ml/",img:"https://www.illicopharma.com/113517-thickbox_default/innoxa-hydralose-gouttes-oculaires-hydratantes-10ml.jpg",alt:"Flacon de gouttes oculaires Innoxa Hydralose 10 ml"},
 {cat:"drops",name:"Visionlux Plus",variant:"Gouttes oculaires · 10 ml",price:"46,635",unit:"TND",meta:"Flacon 10 ml · prix repéré sur une parapharmacie tunisienne",source:"1001para",url:"https://1001para.tn/accueil/12701-visionlux-plus-gouttes-oculaire-10-ml-6191450601153.html",img:"https://1001para.tn/25522-large_default/visionlux-plus-gouttes-oculaire-10-ml.jpg",alt:"Flacon de gouttes oculaires Visionlux Plus 10 ml"}
 ];
-
-// Static-site preview: catalog, inventory, cart, and order book live in this browser only.
 const storeKey="formaStoreV1", orderKey="formaOrdersV1", cartKey="formaCartV1";
 const slug=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 const catalogMap=new Map();
 for(const p of products){
- const id=p.cat+"-"+slug(p.name);
- const n=parseFloat(String(p.price).replace(",",".").split(/[–-]/)[0])||0;
- if(!catalogMap.has(id))catalogMap.set(id,{...p,id,defaultPrice:n,marketPrices:[n],offers:[p.source]});
- else {const v=catalogMap.get(id);v.marketPrices.push(n);v.offers.push(p.source);}
+ const id=p.cat+"-"+slug(p.name), n=parseFloat(String(p.price).replace(",",".").split(/[–-]/)[0])||0;
+ if(!catalogMap.has(id))catalogMap.set(id,{...p,id,defaultPrice:n,marketPrices:[n]});
+ else catalogMap.get(id).marketPrices.push(n);
 }
-const catalog=[...catalogMap.values()];
-const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
-let inventory=read(storeKey,{});
-let orders=read(orderKey,[]);
-let cart=read(cartKey,{});
+const catalog=[...catalogMap.values()], read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch{return fallback}};
+let inventory=read(storeKey,{}),orders=read(orderKey,[]),cart=read(cartKey,{}),db=null,backendReady=false,backendError="",adminSession=false;
 catalog.forEach(p=>{if(!inventory[p.id])inventory[p.id]={available:false,stock:0,price:p.defaultPrice};});
-const writeState=()=>{localStorage.setItem(storeKey,JSON.stringify(inventory));localStorage.setItem(orderKey,JSON.stringify(orders));localStorage.setItem(cartKey,JSON.stringify(cart));};
+const cfg=window.FORMA_SUPABASE_CONFIG||{};
+const writeLocal=()=>{localStorage.setItem(storeKey,JSON.stringify(inventory));localStorage.setItem(orderKey,JSON.stringify(orders));localStorage.setItem(cartKey,JSON.stringify(cart));};
 const money=n=>Number(n||0).toLocaleString("fr-TN",{minimumFractionDigits:3,maximumFractionDigits:3})+" TND";
+async function loadInventory(){
+ const {data,error}=await db.from("inventory").select("product_id,available,stock,sale_price");
+ if(error)throw error;
+ const next={};catalog.forEach(p=>next[p.id]={available:false,stock:0,price:0});
+ data.forEach(row=>{if(next[row.product_id])next[row.product_id]={available:row.available,stock:row.stock,price:Number(row.sale_price)};});
+ inventory=next;render();cartLines();
+}
+async function initBackend(){
+ if(!cfg.url||!cfg.anonKey)return;
+ if(!window.supabase?.createClient){backendError="Le client Supabase ne s’est pas chargé. Vérifiez la connexion réseau.";setOrderNotice(backendError);return;}
+ db=window.supabase.createClient(cfg.url,cfg.anonKey);backendReady=true;
+ try{await loadInventory();document.querySelector("#localAdminWarning").hidden=true;document.querySelector("#localNotice").textContent="Votre commande sera transmise de façon sécurisée à la boutique.";}
+ catch(e){backendError="Backend non initialisé : appliquez supabase/schema.sql puis vérifiez l’URL et la clé publique.";setOrderNotice(backendError);render();}
+}
+function setOrderNotice(text){const el=document.querySelector("#orderNotice");if(el)el.innerHTML='<div class="localNotice">'+text+'</div>';}
 function render(filter="all"){
- const shown=(filter==="all"?catalog:catalog.filter(p=>p.cat===filter));
+ const shown=filter==="all"?catalog:catalog.filter(p=>p.cat===filter);
  document.querySelector("#grid").innerHTML=shown.map(p=>{
-  const st=inventory[p.id], range=[Math.min(...p.marketPrices),Math.max(...p.marketPrices)];
-  const market=range[0]===range[1]?money(range[0]):"Repère "+money(range[0])+"–"+money(range[1]);
-  const canBuy=st.available&&st.stock>0&&st.price>0;
+  const st=inventory[p.id]||{available:false,stock:0,price:0},range=[Math.min(...p.marketPrices),Math.max(...p.marketPrices)];
+  const market=range[0]===range[1]?money(range[0]):"Repère "+money(range[0])+"–"+money(range[1]),canBuy=!backendError&&st.available&&st.stock>0&&st.price>0;
   return '<article class="card"><div class="visual '+(p.cat==="lens"?"color":p.cat==="solutions"?"solution":"drops")+'"><span class="pill">'+p.variant+'</span><img class="productPhoto" src="'+p.img+'" alt="'+p.alt+'" loading="lazy"></div><div class="details"><div class="type">'+(p.cat==="lens"?"Lentilles":p.cat==="solutions"?"Solutions":"Gouttes")+'</div><h2 class="name">'+p.name+'</h2><div class="meta">'+p.meta+'</div><div class="priceRow"><div class="price">'+(canBuy?money(st.price):market)+'</div><span class="source">'+(canBuy?st.stock+" en stock":st.available?"Rupture":"Indisponible")+'</span></div><button class="buy addCart" data-id="'+p.id+'" '+(canBuy?"":"disabled")+'>'+(canBuy?"Ajouter au panier":"Indisponible")+'</button></div></article>';
  }).join("");
  document.querySelectorAll(".addCart").forEach(b=>b.addEventListener("click",()=>addToCart(b.dataset.id)));
 }
 function cartLines(){
  const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,q])=>({p:catalog.find(x=>x.id===id),q})).filter(x=>x.p);
- const total=items.reduce((s,x)=>s+(Number(inventory[x.p.id].price)||0)*x.q,0);
- document.querySelector("#cartItems").innerHTML=items.length?items.map(({p,q})=>'<div class="cartLine"><img src="'+p.img+'" alt=""><div><strong>'+p.name+'</strong><small>'+money(inventory[p.id].price)+' / unité</small><div class="qty"><button type="button" data-minus="'+p.id+'" aria-label="Retirer un article">−</button><span>'+q+'</span><button type="button" data-plus="'+p.id+'" aria-label="Ajouter un article">+</button></div></div><b>'+money(inventory[p.id].price*q)+'</b></div>').join(""):'<p class="emptyCart">Votre panier est vide.</p>';
- document.querySelector("#cartTotal").textContent=money(total);
- document.querySelector("#cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);
- document.querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.minus,-1));
- document.querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.plus,1));
+ const total=items.reduce((s,x)=>s+(Number(inventory[x.p.id]?.price)||0)*x.q,0);
+ document.querySelector("#cartItems").innerHTML=items.length?items.map(({p,q})=>'<div class="cartLine"><img src="'+p.img+'" alt=""><div><strong>'+p.name+'</strong><small>'+money(inventory[p.id]?.price)+' / unité</small><div class="qty"><button type="button" data-minus="'+p.id+'">−</button><span>'+q+'</span><button type="button" data-plus="'+p.id+'">+</button></div></div><b>'+money((inventory[p.id]?.price||0)*q)+'</b></div>').join(""):'<p class="emptyCart">Votre panier est vide.</p>';
+ document.querySelector("#cartTotal").textContent=money(total);document.querySelector("#cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);
+ document.querySelectorAll("[data-minus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.minus,-1));document.querySelectorAll("[data-plus]").forEach(b=>b.onclick=()=>changeQty(b.dataset.plus,1));
 }
 function addToCart(id){
- const p=catalog.find(x=>x.id===id), st=inventory[id];
- if(!p||!st?.available||st.stock<=0)return;
- if((cart[id]||0)>=st.stock){alert("La quantité en stock est atteinte.");return;}
- cart[id]=(cart[id]||0)+1;writeState();cartLines();openPanel("cart");
+ const st=inventory[id];if(!st?.available||st.stock<=0||st.price<=0)return;
+ if((cart[id]||0)>=st.stock){alert("La quantité disponible est atteinte.");return;}
+ cart[id]=(cart[id]||0)+1;writeLocal();cartLines();openPanel("cart");
 }
-function changeQty(id,delta){
- const next=(cart[id]||0)+delta, max=inventory[id]?.stock||0;
- if(next<=0)delete cart[id];else if(next<=max)cart[id]=next;else return;
- writeState();cartLines();
-}
-function openPanel(which){
- document.querySelector("#panels").hidden=false;
- document.querySelector("#cartPanel").hidden=which!=="cart";
- document.querySelector("#adminPanel").hidden=which!=="admin";
- document.body.classList.add("panelOpen");
- if(which==="cart")cartLines();else renderAdmin();
-}
+function changeQty(id,delta){const next=(cart[id]||0)+delta,max=inventory[id]?.stock||0;if(next<=0)delete cart[id];else if(next<=max)cart[id]=next;else return;writeLocal();cartLines();}
+function openPanel(which){document.querySelector("#panels").hidden=false;document.querySelector("#cartPanel").hidden=which!=="cart";document.querySelector("#adminPanel").hidden=which!=="admin";document.body.classList.add("panelOpen");if(which==="cart")cartLines();else renderAdmin();}
 function closePanel(){document.querySelector("#panels").hidden=true;document.body.classList.remove("panelOpen");}
 function renderAdmin(){
- document.querySelector("#adminProducts").innerHTML=catalog.map(p=>{
-  const st=inventory[p.id];
-  return '<div class="adminProduct"><img src="'+p.img+'" alt=""><div class="adminName"><b>'+p.name+'</b><small>'+p.variant+'</small></div><label>Prix (TND)<input type="number" min="0" step="0.001" data-price="'+p.id+'" value="'+Number(st.price).toFixed(3)+'"></label><label>Stock<input type="number" min="0" step="1" data-stock="'+p.id+'" value="'+Number(st.stock)+'"></label><label class="availability"><input type="checkbox" data-available="'+p.id+'" '+(st.available?"checked":"")+'> Disponible</label></div>';
- }).join("");
- document.querySelector("#adminOrders").innerHTML=orders.length?orders.slice().reverse().map(o=>'<article class="orderCard"><div class="orderTop"><b>'+o.ref+'</b><span>'+new Date(o.createdAt).toLocaleString("fr-TN")+'</span><select data-status="'+o.ref+'">'+["À traiter","Confirmée","Expédiée","Terminée","Annulée"].map(s=>'<option '+(o.status===s?"selected":"")+'>'+s+'</option>').join("")+'</select></div><p><b>'+o.customer.name+'</b> · '+o.customer.phone+'<br>'+o.customer.address+'</p><ul>'+o.items.map(i=>'<li>'+i.name+' × '+i.qty+' — '+money(i.price*i.qty)+'</li>').join("")+'</ul><strong>Total : '+money(o.total)+'</strong></article>').join(""):'<p class="emptyCart">Aucune commande enregistrée dans ce navigateur.</p>';
- document.querySelectorAll("[data-status]").forEach(s=>s.onchange=()=>{const o=orders.find(x=>x.ref===s.dataset.status);if(o){o.status=s.value;writeState();}});
+ document.querySelector("#localAdminWarning").hidden=backendReady;document.querySelector("#adminLogin").hidden=!backendReady||adminSession;document.querySelector("#adminContent").hidden=backendReady&&!adminSession;
+ if(backendError&&backendReady){document.querySelector("#adminLogin").hidden=true;document.querySelector("#adminContent").hidden=false;document.querySelector("#adminProducts").innerHTML='<p class="localNotice">'+backendError+'</p>';return;}
+ if(backendReady&&!adminSession)return;
+ document.querySelector("#adminProducts").innerHTML=catalog.map(p=>{const st=inventory[p.id]||{available:false,stock:0,price:0};return '<div class="adminProduct"><img src="'+p.img+'" alt=""><div class="adminName"><b>'+p.name+'</b><small>'+p.variant+'</small></div><label>Prix TND<input type="number" min="0" step="0.001" data-price="'+p.id+'" value="'+Number(st.price).toFixed(3)+'"></label><label>Stock<input type="number" min="0" step="1" data-stock="'+p.id+'" value="'+Number(st.stock)+'"></label><label class="availability"><input type="checkbox" data-available="'+p.id+'" '+(st.available?"checked":"")+'> Disponible</label></div>';}).join("");
+ document.querySelector("#adminOrders").innerHTML=orders.length?orders.slice().reverse().map(o=>'<article class="orderCard"><div class="orderTop"><b>'+o.ref+'</b><span>'+new Date(o.created_at||o.createdAt).toLocaleString("fr-TN")+'</span><select data-status="'+(o.id||o.ref)+'">'+["À traiter","Confirmée","Expédiée","Terminée","Annulée"].map(s=>'<option '+((o.status||"À traiter")===s?"selected":"")+'>'+s+'</option>').join("")+'</select></div><p><b>'+(o.customer_name||o.customer?.name||"")+'</b> · '+(o.phone||o.customer?.phone||"")+'<br>'+(o.address||o.customer?.address||"")+' '+(o.city||o.customer?.city||"")+'</p><ul>'+((o.order_items||o.items||[]).map(i=>'<li>'+(i.product_name||i.name)+' × '+(i.quantity||i.qty)+' — '+money((i.unit_price||i.price)*(i.quantity||i.qty))+'</li>').join(""))+'</ul><strong>Total : '+money(o.total)+'</strong></article>').join(""):'<p class="emptyCart">Aucune commande enregistrée.</p>';
+ document.querySelectorAll("[data-status]").forEach(s=>s.onchange=async()=>{if(backendReady){const {error}=await db.from("orders").update({status:s.value}).eq("id",s.dataset.status);if(error)alert("Statut non modifié : "+error.message);else await refreshOrders();}else{const o=orders.find(x=>x.ref===s.dataset.status);if(o){o.status=s.value;writeLocal();}}});
+}
+async function refreshOrders(){
+ const {data,error}=await db.from("orders").select("id,ref,created_at,status,customer_name,phone,address,city,total,order_items(product_name,quantity,unit_price)").order("created_at",{ascending:false});
+ if(error){alert("Impossible de charger les commandes : "+error.message);return;}orders=data||[];renderAdmin();
 }
 document.querySelectorAll("[data-filter]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render(b.dataset.filter)}));
 document.querySelectorAll("[data-jump]").forEach(a=>a.addEventListener("click",()=>{const key=a.dataset.jump;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x.dataset.filter===key));render(key)}));
-document.querySelector("#cartOpen").onclick=()=>openPanel("cart");
-document.querySelector("#adminOpen").onclick=()=>openPanel("admin");
-document.querySelector("#panelClose").onclick=closePanel;
-document.querySelector("#panels").addEventListener("click",e=>{if(e.target.id==="panels")closePanel();});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closePanel();});
-document.querySelector("#saveInventory").onclick=()=>{
+document.querySelector("#cartOpen").onclick=()=>openPanel("cart");document.querySelector("#adminOpen").onclick=()=>openPanel("admin");document.querySelector("#panelClose").onclick=closePanel;
+document.querySelector("#panels").addEventListener("click",e=>{if(e.target.id==="panels")closePanel();});document.addEventListener("keydown",e=>{if(e.key==="Escape")closePanel();});
+document.querySelector("#adminLoginForm").addEventListener("submit",async e=>{
+ e.preventDefault();if(!backendReady)return;const fd=new FormData(e.currentTarget),{data,error}=await db.auth.signInWithPassword({email:fd.get("email"),password:fd.get("password")});
+ if(error){alert("Connexion refusée : "+error.message);return;}
+ const check=await db.from("admin_users").select("user_id").eq("user_id",data.user.id).maybeSingle();
+ if(check.error||!check.data){await db.auth.signOut();alert("Ce compte n’a pas les droits administrateur.");return;}
+ adminSession=true;e.currentTarget.reset();const inv=await db.from("inventory").select("product_id,available,stock,sale_price");
+ if(!inv.error){catalog.forEach(p=>inventory[p.id]={available:false,stock:0,price:0});inv.data.forEach(r=>{if(inventory[r.product_id])inventory[r.product_id]={available:r.available,stock:r.stock,price:Number(r.sale_price)};});}
+ await refreshOrders();render();renderAdmin();
+});
+document.querySelector("#adminLogout").onclick=async()=>{if(db)await db.auth.signOut();adminSession=false;renderAdmin();};
+document.querySelector("#saveInventory").onclick=async()=>{
  document.querySelectorAll("[data-price]").forEach(x=>inventory[x.dataset.price].price=Math.max(0,Number(x.value)||0));
  document.querySelectorAll("[data-stock]").forEach(x=>inventory[x.dataset.stock].stock=Math.max(0,Math.floor(Number(x.value)||0)));
  document.querySelectorAll("[data-available]").forEach(x=>inventory[x.dataset.available].available=x.checked);
- writeState();render();cartLines();renderAdmin();alert("Stock enregistré sur cet appareil.");
+ if(backendReady){
+  const rows=catalog.map(p=>({product_id:p.id,name:p.name,category:p.cat,description:p.meta,image_url:p.img,market_price_min:Math.min(...p.marketPrices),market_price_max:Math.max(...p.marketPrices),sale_price:inventory[p.id].price,stock:inventory[p.id].stock,available:inventory[p.id].available&&inventory[p.id].stock>0}));
+  const {error}=await db.from("inventory").upsert(rows,{onConflict:"product_id"});
+  if(error){alert("Stock non enregistré : "+error.message);return;}
+  inventory=catalog.reduce((a,p)=>(a[p.id]={...inventory[p.id],available:inventory[p.id].available&&inventory[p.id].stock>0},a),{});await loadInventory();renderAdmin();alert("Stock synchronisé.");
+ }else{writeLocal();render();cartLines();renderAdmin();alert("Stock enregistré dans ce navigateur uniquement.");}
 };
 document.querySelector("#exportOrders").onclick=()=>{
- const rows=[["Commande","Date","Statut","Nom","Téléphone","Adresse","Articles","Total"],...orders.map(o=>[o.ref,o.createdAt,o.status,o.customer.name,o.customer.phone,o.customer.address,o.items.map(i=>i.name+" x "+i.qty).join(" | "),o.total])];
- const csv=rows.map(r=>r.map(v=>'"'+String(v??"").replaceAll('"','""')+'"').join(";")).join("\r\n");
- const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="forma-commandes.csv";a.click();URL.revokeObjectURL(a.href);
+ const rows=[["Commande","Date","Statut","Nom","Téléphone","Adresse","Ville","Articles","Total"],...orders.map(o=>[o.ref,o.created_at||o.createdAt,o.status,o.customer_name||o.customer?.name,o.phone||o.customer?.phone,o.address||o.customer?.address,o.city||o.customer?.city,(o.order_items||o.items||[]).map(i=>(i.product_name||i.name)+" x "+(i.quantity||i.qty)).join(" | "),o.total])];
+ const csv=rows.map(r=>r.map(v=>'"'+String(v??"").replaceAll('"','""')+'"').join(";")).join("\r\n"),a=document.createElement("a");
+ a.href=URL.createObjectURL(new Blob(["\\ufeff"+csv],{type:"text/csv;charset=utf-8"}));a.download="forma-commandes.csv";a.click();URL.revokeObjectURL(a.href);
 };
-document.querySelector("#checkoutForm").addEventListener("submit",e=>{
- e.preventDefault();
- const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,qty])=>({p:catalog.find(x=>x.id===id),qty})).filter(x=>x.p);
+document.querySelector("#checkoutForm").addEventListener("submit",async e=>{
+ e.preventDefault();const items=Object.entries(cart).filter(([id,q])=>q>0).map(([id,quantity])=>({p:catalog.find(x=>x.id===id),quantity})).filter(x=>x.p);
  if(!items.length){alert("Votre panier est vide.");return;}
- if(items.some(x=>!inventory[x.p.id].available||inventory[x.p.id].stock<x.qty)){alert("Le stock a changé. Vérifiez votre panier.");return;}
- const fd=new FormData(e.currentTarget), now=new Date(), ref="FL-"+now.getTime().toString().slice(-7);
- const order={ref,createdAt:now.toISOString(),status:"À traiter",customer:{name:fd.get("name"),phone:fd.get("phone"),address:fd.get("address"),city:fd.get("city")},items:items.map(x=>({name:x.p.name,qty:x.qty,price:Number(inventory[x.p.id].price)})),total:items.reduce((s,x)=>s+Number(inventory[x.p.id].price)*x.qty,0)};
- items.forEach(x=>{inventory[x.p.id].stock-=x.qty;if(inventory[x.p.id].stock<=0)inventory[x.p.id].available=false;});
- orders.push(order);cart={};writeState();render();cartLines();renderAdmin();e.currentTarget.reset();
- document.querySelector("#orderNotice").innerHTML='<div class="noticeSuccess"><b>Commande '+ref+' enregistrée sur cet appareil.</b><br>Pour le moment, le vendeur ne la reçoit pas automatiquement. Le site doit être relié à votre destination de commandes.</div>';
+ if(items.some(x=>!inventory[x.p.id]?.available||inventory[x.p.id].stock<x.quantity)){alert("Le stock a changé. Vérifiez votre panier.");return;}
+ const fd=new FormData(e.currentTarget);
+ if(backendReady){
+  if(backendError){setOrderNotice(backendError);return;}
+  const {data,error}=await db.rpc("place_order",{p_customer_name:fd.get("name"),p_phone:fd.get("phone"),p_address:fd.get("address"),p_city:fd.get("city"),p_items:items.map(x=>({product_id:x.p.id,quantity:x.quantity}))});
+  if(error){setOrderNotice("Commande non transmise : "+error.message);return;}
+  const notice=document.querySelector("#orderNotice");notice.innerHTML='<div class="noticeSuccess"><b>Commande '+data.ref+' confirmée.</b><br>Votre commande a bien été transmise.</div>';
+  cart={};writeLocal();await loadInventory();e.currentTarget.reset();cartLines();return;
+ }
+ const now=new Date(),ref="FL-"+now.getTime().toString().slice(-7),order={ref,createdAt:now.toISOString(),status:"À traiter",customer:{name:fd.get("name"),phone:fd.get("phone"),address:fd.get("address"),city:fd.get("city")},items:items.map(x=>({name:x.p.name,qty:x.quantity,price:Number(inventory[x.p.id].price)})),total:items.reduce((s,x)=>s+Number(inventory[x.p.id].price)*x.quantity,0)};
+ items.forEach(x=>{inventory[x.p.id].stock-=x.quantity;if(inventory[x.p.id].stock<=0)inventory[x.p.id].available=false;});orders.push(order);cart={};writeLocal();render();cartLines();renderAdmin();e.currentTarget.reset();
+ document.querySelector("#orderNotice").innerHTML='<div class="noticeSuccess"><b>Commande '+ref+' enregistrée sur cet appareil.</b><br>Elle n’est pas encore reçue par la boutique. Configurez le backend Supabase pour transmettre les commandes.</div>';
 });
-render();cartLines();</script>
+render();cartLines();initBackend();
+</script>
 </body>
 </html>
