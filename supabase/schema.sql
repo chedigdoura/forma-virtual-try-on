@@ -84,6 +84,7 @@ create policy "Admins read order items" on public.order_items
   for select to authenticated using (public.is_forma_admin());
 
 grant select on public.inventory to anon, authenticated;
+grant select on public.admin_users to authenticated;
 grant insert, update, delete on public.inventory to authenticated;
 grant select, update on public.orders to authenticated;
 grant select on public.order_items to authenticated;
@@ -123,7 +124,7 @@ begin
   if nullif(trim(p_city),'') is null or length(p_city) > 100 then
     raise exception 'Ville invalide.';
   end if;
-  if jsonb_typeof(p_items) <> 'array' or jsonb_array_length(p_items) < 1 or jsonb_array_length(p_items) > 30 then
+  if p_items is null or jsonb_typeof(p_items) <> 'array' or jsonb_array_length(p_items) < 1 or jsonb_array_length(p_items) > 30 then
     raise exception 'Panier invalide.';
   end if;
   if (select count(*) from jsonb_array_elements(p_items)) <>
