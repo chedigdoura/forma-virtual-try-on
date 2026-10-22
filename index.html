@@ -12,7 +12,7 @@
 <style>
 :root{--ink:#171816;--paper:#f7f5f0;--white:#fff;--muted:#74756f;--line:#e4e3dc;--green:#c7ef52;--dark:#20251d;--sans:"DM Sans",sans-serif;--display:Manrope,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
-.announcement{height:32px;background:var(--dark);color:white;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.04em}.announcement b{color:var(--green);margin-right:6px}
+.announcement{height:32px;background:var(--dark);color:white;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.04em}.announcement b{color:var(--green);margin-right:6px}.delivery{font-weight:800;color:var(--green)}
 header{height:70px;border-bottom:1px solid var(--line);background:#f7f5f0eF;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}.nav{height:100%;max-width:1180px;padding:0 24px;margin:auto;display:flex;align-items:center;justify-content:space-between}.logo{font:800 25px var(--display);letter-spacing:-1.5px}.logo i{font-style:normal;color:#77931c}.navcats{display:flex;gap:30px;font-size:12px;font-weight:700}.navcats a:hover{text-decoration:underline;text-underline-offset:4px}.navright{font-size:11px;color:#555}
 main{max-width:1180px;margin:0 auto;padding:0 24px}.intro{padding:32px 0 20px;display:flex;align-items:end;justify-content:space-between;gap:20px}.kicker{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#61731e;margin-bottom:9px}.intro h1{font:800 clamp(32px,4.2vw,54px)/1.02 var(--display);letter-spacing:-2px;margin:0;max-width:680px}.intro h1 span{background:var(--green);padding:0 8px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.intro p{font-size:12px;line-height:1.65;color:var(--muted);max-width:285px;margin:0 0 3px}
 .controls{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:14px 0 15px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{background:transparent;border:1px solid #d6d6cd;border-radius:30px;padding:8px 14px;font-size:11px;font-weight:700;color:#51534b}.filter.active,.filter:hover{background:var(--dark);color:#fff;border-color:var(--dark)}.sortnote{font-size:10px;color:var(--muted);white-space:nowrap}
@@ -27,10 +27,10 @@ footer{border-top:1px solid var(--line);padding:24px 0 32px;display:flex;justify
 </style>
 </head>
 <body>
-<div class="announcement"><b>FORMA LENS</b> · LE N°1 DES LENTILLES EN LIGNE EN TUNISIE</div>
+<div class="announcement"><b>FORMA LENS</b> · N°1 DES LENTILLES EN TUNISIE <span class="delivery">· LIVRAISON EN 24H</span></div>
 <header><div class="nav"><a class="logo" href="#">FORMA<span>.</span></a><nav class="navcats"><a href="#catalogue" data-jump="lens">Lentilles</a><a href="#catalogue" data-jump="solutions">Solutions</a><a href="#catalogue" data-jump="drops">Gouttes</a></nav><div class="navright">Prix visibles · sélection en ligne</div></div></header>
 <main>
-<section class="intro"><div><div class="kicker">Lentilles · Solutions · Gouttes</div><h1>Le N°1 des lentilles<br><span>en ligne en Tunisie.</span></h1></div><p>Les produits et les prix tout de suite. Comparez une sélection de références trouvées chez des vendeurs en ligne tunisiens.</p></section>
+<section class="intro"><div><div class="kicker">Lentilles · Solutions · Gouttes</div><h1>Le N°1 des lentilles<br><span>en Tunisie.</span></h1></div><p>Les produits et les prix tout de suite. Comparez une sélection de références trouvées chez des vendeurs en ligne tunisiens.</p></section>
 <section id="catalogue">
 <div class="controls"><div class="filters" aria-label="Filtrer les produits"><button class="filter active" data-filter="all">Tout voir</button><button class="filter" data-filter="lens">Lentilles</button><button class="filter" data-filter="solutions">Solutions</button><button class="filter" data-filter="drops">Gouttes</button></div><div class="sortnote">Prix publics relevés en Tunisie · octobre 2026</div></div>
 <div class="grid" id="grid"></div>
