@@ -1,42 +1,43 @@
-# FORMA Optique — boutique lunettes & lentilles
+# FORMA — lentilles de contact
 
-Boutique statique en français, pensée pour le marché tunisien : montures optiques, lunettes de soleil, lentilles de couleur, lentilles correctrices et entretien des lentilles.
+Boutique statique en français dédiée exclusivement aux lentilles de contact : lentilles colorées, lentilles correctrices et options journalières ou mensuelles. Aucune monture ni lunettes n'est proposée.
 
-## Catalogue actuel
+## Catalogue
 
-- **SKU27862** — monture optique vert translucide, **57 TND**. C'est la seule référence et le seul prix confirmés dans le stock reçu.
-- Les autres fiches affichent des **repères de prix observés chez des vendeurs tunisiens**, et non des produits ou tarifs FORMA confirmés. Elles doivent être remplacées par vos références réelles avant de prendre des commandes.
+Les produits et les tarifs doivent être renseignés à partir du stock réel de FORMA. Les prix affichés à titre de comparaison dans le benchmark ci-dessous sont des prix relevés chez des vendeurs tunisiens, pas des prix FORMA ni une confirmation de disponibilité.
 
-Repères consultés le 22 octobre 2026 : montures entrée de gamme 55–120 TND ; lunettes solaires entrée de gamme 15–60 TND ; collections d'opticien de quelques centaines à plus de 2 000 TND ; lentilles colorées 90 TND la paire en promotion ou 120 TND la boîte de cinq paires ; lentilles Clarity 1 Day à partir de 160 TND ; solution multifonctions 360 ml autour de 30–35 TND. Les prix changent selon marque, format et promotion.
+## Repères de prix en Tunisie
 
-### Sources marché
+Relevé le 22 octobre 2026 ; les prix varient selon marque, durée d'utilisation, correction, nombre de lentilles et promotions :
 
-- [Nyvara](https://www.nyvara.net/)
-- [AZZABI Optic — lunettes de vue](https://azzabioptic.com/lunettes-de-vue/lunettes-de-vue-femme/page/2/)
-- [AZZABI Optic — lunettes de soleil](https://azzabioptic.com/lunettes-de-soleil/lunettes-de-soleil-femme/)
-- [Tun Shop — lunettes de soleil](https://tun-shop.tn/collections/lunettes-soleil)
-- [Tunis Lenses — lentilles colorées](https://tunislenses.com/)
+- **Lentilles colorées** : environ **90 TND la paire** en promotion chez Tunis Lenses (prix affiché hors promotion : 150 TND) ; **120 TND la boîte de 5 paires** pour une référence Wonderlook.
+- **Lentilles journalières correctrices** : une référence Clarity 1 Day affichée à **160 TND** chez AZZABI Optic.
+- **Autres lentilles colorées** : références autour de **140–150 TND** chez AZZABI Optic.
+
+Ces exemples sont des repères de marché, pas des prix ou des références de stock FORMA. Vérifier les prix et la disponibilité auprès des vendeurs avant publication commerciale.
+
+### Sources consultées
+
+- [Tunis Lenses](https://tunislenses.com/) — lentilles colorées et formats
 - [AZZABI Optic — lentilles de contact](https://azzabioptic.com/categorie-produit/lentilles-de-contact/)
-- [B Pharma — solution pour lentilles 360 ml](https://www.bpharma.tn/produit/eye-care-pharma-souples-solution-pour-lentilles-360ml/)
 
-## Fonctionnalités
+## Fonctionnalités du site
 
-- Catalogue filtrable par famille de produits.
-- Essayage caméra en direct de la monture SKU27862.
-- Galerie photo produit issue des vues reçues.
-- Les cartes de prix marché renvoient vers leur source et sont identifiées comme non confirmées.
-- L'essayage reste dans le navigateur et ne téléverse pas la vidéo.
+- Présentation de catégories de lentilles et comparaison indicative des prix du marché tunisien.
+- Sélection interactive des couleurs.
+- Liens vers les sources des exemples de prix.
+- Aucune monture, lunette de soleil ou fonctionnalité d'essayage de lunettes.
 
 ## Lancer localement
 
-Servir la racine du dépôt avec un serveur web statique et ouvrir en HTTPS, ou en localhost pour l'essai caméra. Par exemple :
+Depuis la racine du dépôt, lancer un serveur statique :
 
 ```bash
 python -m http.server 8000
 ```
 
-Ouvrir `http://localhost:8000`. L'essayage charge MediaPipe Tasks Vision depuis un CDN et son modèle depuis Google, donc une connexion internet est nécessaire au démarrage du suivi.
+Ouvrir ensuite http://localhost:8000 dans le navigateur.
 
-## Publication GitHub Pages
+## Publication
 
-Le dépôt publie `index.html` depuis la branche `main`. GitHub Actions construit et publie la version à chaque mise à jour.
+GitHub Pages publie le site depuis la branche `main`.
